@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ModuleData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://systems/ModuleData.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://assets/art/base/solar_panel.png" id="2_tex"]
+
+[resource]
+script = ExtResource("1_script")
+id = &"solar_panel"
+display_name = "Panel solar"
+display_name_en = "Solar panel"
+description = "Convierte la luz del Sol en energía para toda la base. El polvo lo tapa y produce menos."
+description_en = "It turns sunlight into energy for the whole base. Dust covers it and it makes less."
+texture = ExtResource("2_tex")
+size_tiles = Vector2i(3, 1)
+energy_per_sol = 22.0

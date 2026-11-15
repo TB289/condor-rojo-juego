@@ -1,0 +1,58 @@
+{
+  "id": "grow_potato",
+  "category": "main",
+  "order": 4,
+  "title": "La primera papa",
+  "description": "Con el agua del hielo ya puedes regar. Planta una papa en el invernadero y espera a que crezca.",
+  "science": "En la Tierra, científicos ya probaron cultivar plantas en tierra parecida a la de Marte, con abono. El estudio OSD-476 sembró plantas en regolito lunar real: germinaron, pero crecieron lento y estresadas. Por eso aquí la papa se planta con abono. El regolito es el polvo y las piedritas sueltas del suelo.",
+  "done": "¡Creció la primera papa de Marte! Ya hay algo más para comer.",
+  "unlock": "find_water_ice",
+  "requires_module": "greenhouse",
+  "objectives": [
+    {
+      "id": "obj_1",
+      "type": "enter",
+      "target": "greenhouse",
+      "label": "Entra al invernadero",
+      "label_en": "Enter the greenhouse"
+    },
+    {
+      "id": "obj_2",
+      "type": "repair",
+      "target": "greenhouse_bed",
+      "tool": "seed",
+      "prompt": "Plantar",
+      "prompt_en": "Plant",
+      "label": "Planta la papa",
+      "seconds": 1.5,
+      "label_en": "Plant the potato"
+    },
+    {
+      "id": "obj_3",
+      "type": "survive_days",
+      "days": 1,
+      "label": "Espera un día a que crezca",
+      "label_en": "Wait one day for it to grow"
+    },
+    {
+      "id": "obj_4",
+      "type": "collect",
+      "target": "greenhouse_bed",
+      "prompt": "Recoger",
+      "prompt_en": "Pick",
+      "label": "Recoge la papa",
+      "label_en": "Pick the potato"
+    }
+  ],
+  "rewards": {
+    "energy": 0,
+    "food": 20,
+    "oxygen": 0,
+    "flag": "first_potato"
+  },
+  "title_en": "The first potato",
+  "description_en": "With the water from the ice you can water now. Plant a potato in the greenhouse and wait for it to grow.",
+  "science_en": "On Earth, scientists have already tried growing plants in soil like Mars soil, with compost. Study OSD-476 sowed plants in real Moon regolith: they sprouted, but grew slowly and stressed. That is why the potato here is planted with compost. Regolith is the loose dust and pebbles on the ground.",
+  "done_en": "The first Mars potato grew! There is a little more to eat.",
+  "min_sol": 3
+}

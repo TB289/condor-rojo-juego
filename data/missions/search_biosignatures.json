@@ -1,0 +1,52 @@
+{
+  "id": "search_biosignatures",
+  "category": "main",
+  "order": 14,
+  "title": "Search Jezero for biosignatures",
+  "description": "En el lecho seco de un lago antiguo hay arcilla y capas. Mira dos puntos. Eso no demuestra que hubo vida.",
+  "science": "Una biosignatura es una pista que podría venir de vida, o de otra cosa. Hay que contrastarla en la Tierra. Lugar real: Cráter Jezero, 18,41° N, 77,69° E (Mars Trek).",
+  "done": "No hay prueba de vida. Hay una posible biosignatura, o un falso positivo, que habría que contrastar en la Tierra.",
+  "unlock": "study_minerals",
+  "objectives": [
+    {
+      "id": "obj_1",
+      "type": "go_to",
+      "target": "jezero_crater",
+      "label": "Llega al cráter Jezero",
+      "label_en": "Reach Jezero crater"
+    },
+    {
+      "id": "obj_2",
+      "type": "sample",
+      "target": "lake_clay",
+      "label": "Toma una muestra de arcilla",
+      "seconds": 2.2,
+      "flag": "sampled_clay",
+      "note": "Muestra de arcilla guardada.",
+      "label_en": "Take a clay sample",
+      "note_en": "Clay sample stored."
+    },
+    {
+      "id": "obj_3",
+      "type": "scan",
+      "target": "lake_layers",
+      "label": "Escanea las capas del sedimento",
+      "seconds": 2.0,
+      "flag": "scanned_layers",
+      "note": "No hay prueba de vida. Puede ser una biosignatura o un falso positivo.",
+      "label_en": "Scan the sediment layers",
+      "note_en": "There is no proof of life. It may be a biosignature or a false positive."
+    }
+  ],
+  "rewards": {
+    "energy": 4,
+    "food": 0,
+    "oxygen": 0,
+    "flag": "checked_biosignature"
+  },
+  "title_en": "Search Jezero for biosignatures",
+  "description_en": "In the dry bed of an ancient lake there is clay and layers. Look at two spots. That does not prove there was life.",
+  "science_en": "A biosignature is a clue that could come from life, or from something else. It has to be checked on Earth. Real place: Jezero Crater, 18.41° N, 77.69° E (Mars Trek).",
+  "done_en": "There is no proof of life. There is a possible biosignature, or a false positive, that would have to be checked on Earth.",
+  "min_sol": 5
+}

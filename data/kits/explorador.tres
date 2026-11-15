@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="KitData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://systems/KitData.gd" id="1_script"]
+
+[resource]
+script = ExtResource("1_script")
+id = &"explorador"
+display_name = "Explorador"
+display_name_en = "Explorer"
+module_ids = Array[StringName]([&"habitat", &"solar_panel", &"antenna_dish"])
+gain = "Hablas con la Tierra y recibes consejos."
+gain_en = "You talk to Earth and get advice."
+loss = "Sin oxígeno de reserva ni comida extra."
+loss_en = "No spare oxygen and no extra food."

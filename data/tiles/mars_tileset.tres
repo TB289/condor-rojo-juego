@@ -1,0 +1,145 @@
+[gd_resource type="TileSet" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/art/tiles/mars_tiles_16.png" id="1_0pyfy"]
+[ext_resource type="Texture2D" path="res://assets/art/tiles/pixellab/mars_dust_to_regolith.png" id="2_cmcly"]
+[ext_resource type="Texture2D" path="res://assets/art/tiles/pixellab/mars_regolith_to_basalt.png" id="3_7oi2p"]
+[ext_resource type="Texture2D" path="res://assets/art/tiles/pixellab/mars_dust_to_ice.png" id="4_eid6i"]
+[ext_resource type="Texture2D" path="res://assets/art/tiles/pixellab/mars_dust_to_path.png" id="5_5irwc"]
+[ext_resource type="Texture2D" path="res://assets/art/tiles/pixellab/mars_dust_to_dune.png" id="6_wky21"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pxn5c"]
+texture = ExtResource("1_0pyfy")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-6, 1, 6, 1, 6, 7, -6, 7)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-6, 1, 6, 1, 6, 7, -6, 7)
+2:1/0 = 0
+3:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nylwy"]
+texture = ExtResource("2_cmcly")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1ypmm"]
+texture = ExtResource("3_7oi2p")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_alpar"]
+texture = ExtResource("4_eid6i")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7o3gr"]
+texture = ExtResource("5_5irwc")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5asc1"]
+texture = ExtResource("6_wky21")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+
+[resource]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_pxn5c")
+sources/1 = SubResource("TileSetAtlasSource_nylwy")
+sources/2 = SubResource("TileSetAtlasSource_1ypmm")
+sources/3 = SubResource("TileSetAtlasSource_alpar")
+sources/4 = SubResource("TileSetAtlasSource_7o3gr")
+sources/5 = SubResource("TileSetAtlasSource_5asc1")

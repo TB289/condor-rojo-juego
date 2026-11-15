@@ -1,0 +1,10 @@
+# Cóndor Rojo v2.5.43 — Intro rocket and responsive scaling
+
+- Replaced the INTRO ONLY (Earth launch, space flight, and Mars landing film) sprite with the red Ecuadorian rocket from `sprites.zip`.
+- Removed the unwanted brown triangle drawn on the intro Earth's surface.
+- Kept `assets/art/base/ship_integrated.png` and all gameplay ship visuals unchanged.
+- Corrected the render frame to follow the expanded logical viewport at different window ratios; avoids nonuniform horizontal/vertical world stretching and sidebars.
+- Compared the teammate's `kjhshjfgjkshk.zip` with v2.5.42. Carried over its additive ship-segment art assets for future use without enabling its older incompatible game systems.
+- All Sol 1 and Sol 3 weather triggers, rover repair Sol 1, driving Sol 2, missions, touchscreen sprites and dialogue stay based on v2.5.42.
+
+Source validation only; please test the opening animation, resize, and main gameplay in Godot 4.7.

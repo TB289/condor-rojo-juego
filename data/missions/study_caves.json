@@ -1,0 +1,51 @@
+{
+  "id": "study_caves",
+  "category": "secondary",
+  "order": 12,
+  "title": "Estudiar las cuevas",
+  "description": "Al norte hay un tragaluz. Entra, escanea la pared y sal por la misma boca.",
+  "science": "En Marte hay tragaluces y tubos de lava. El techo protege del frío y de la radiación. Aún no se sabe si guardan hielo. Lugar real: Arsia Mons, 8,26° S, 120,09° O (Mars Trek).",
+  "done": "Escaneaste el interior. Quedan anotadas las estrías y el hielo de la pared.",
+  "unlock": [
+    "day:6",
+    "study_minerals"
+  ],
+  "objectives": [
+    {
+      "id": "obj_1",
+      "type": "go_to",
+      "target": "cave_mouth",
+      "label": "Llega a la boca de la cueva",
+      "label_en": "Reach the cave mouth"
+    },
+    {
+      "id": "obj_2",
+      "type": "enter",
+      "target": "cave",
+      "label": "Entra a la cueva",
+      "label_en": "Enter the cave"
+    },
+    {
+      "id": "obj_3",
+      "type": "scan",
+      "target": "cave_scan",
+      "label": "Escanea la pared de adentro",
+      "seconds": 2.0,
+      "flag": "scanned_cave_wall",
+      "note": "Estrías y hielo de pared anotados.",
+      "label_en": "Scan the inner wall",
+      "note_en": "Grooves and wall ice written down."
+    }
+  ],
+  "rewards": {
+    "energy": 0,
+    "food": 0,
+    "oxygen": 4,
+    "flag": "scanned_cave"
+  },
+  "title_en": "Study the caves",
+  "description_en": "To the north there is a skylight. Go in, scan the wall, and leave through the same mouth.",
+  "science_en": "Mars has skylights and lava tubes. The roof protects from the cold and from radiation. It is not yet known if they hold ice. Real place: Arsia Mons, 8.26° S, 120.09° W (Mars Trek).",
+  "done_en": "You scanned the inside. The grooves and the ice on the wall are written down.",
+  "min_sol": 6
+}

@@ -1,0 +1,41 @@
+GIMP Palette
+Name: Condor Rojo
+Columns: 8
+# Paleta de 32 colores para Cóndor Rojo, estilo arcade con color vivo. Abrir en Aseprite o LibreSprite: Paleta > Importar.
+# Arena y roca
+248 224 160	Arena muy clara
+246 200 120	Arena clara
+232 137  58	Arena
+212 160  90	Ocre
+194  74  28	Terracota
+168  72  40	Parche
+138  46  20	Roca
+196 120  72	Piedra
+# Sombras
+138  48  88	Sombra granate
+ 90  36 104	Sombra púrpura
+ 58  26  40	Contorno
+ 26  12  20	Sombra profunda
+# Base y metal
+255 252 232	Destello
+240 244 248	Metal claro
+122 140 154	Metal
+ 58  72  84	Metal oscuro
+ 42 138 184	Panel solar
+ 62 212 232	Cristal
+184 244 255	Destello de cristal
+# Traje y bandera
+255 248 236	Traje claro
+184 176 164	Traje sombra
+255 232 176	Luz de borde
+255 106  32	Naranja del traje
+255 224   0	Amarillo Ecuador
+ 26  76 220	Azul Ecuador
+232  16  48	Rojo Ecuador
+# Vegetación, cielo y UI
+180 248 106	Hoja clara
+140 232  70	Hoja
+ 46 138  40	Hoja oscura
+255 192 168	Cielo rosa
+255 138  88	Cielo naranja
+ 20  32  48	Visor

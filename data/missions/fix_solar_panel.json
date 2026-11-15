@@ -1,0 +1,40 @@
+{
+  "id": "fix_solar_panel",
+  "category": "main",
+  "order": 2,
+  "title": "Set up the solar panel",
+  "description": "El panel solar está cubierto de polvo. Ve hasta él y límpialo para que dé más energía.",
+  "science": "El polvo de Marte se pega a los paneles solares y les quita energía. A veces el viento los limpia un poco.",
+  "done": "¡El panel quedó limpio! Ahora le llega más luz del Sol.",
+  "unlock": "plant_flag",
+  "requires_module": "solar_panel",
+  "objectives": [
+    {
+      "id": "obj_1",
+      "type": "go_to",
+      "target": "solar_panel",
+      "label": "Llega al panel solar",
+      "label_en": "Reach the solar panel"
+    },
+    {
+      "id": "obj_2",
+      "type": "repair",
+      "target": "solar_panel",
+      "prompt": "Limpiar",
+      "prompt_en": "Clean",
+      "label": "Limpia el polvo del panel",
+      "seconds": 1.5,
+      "label_en": "Clean the dust off the panel"
+    }
+  ],
+  "rewards": {
+    "energy": 15,
+    "food": 0,
+    "oxygen": 0,
+    "flag": "panel_cleaned"
+  },
+  "title_en": "Set up the solar panel",
+  "description_en": "The solar panel is covered in dust. Go to it and clean it so it makes more energy.",
+  "science_en": "Mars dust sticks to the solar panels and takes away their power. Sometimes the wind cleans them a little.",
+  "done_en": "The panel is clean! More sunlight reaches it now."
+}

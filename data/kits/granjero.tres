@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="KitData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://systems/KitData.gd" id="1_script"]
+
+[resource]
+script = ExtResource("1_script")
+id = &"granjero"
+display_name = "Granjero"
+display_name_en = "Farmer"
+module_ids = Array[StringName]([&"habitat", &"solar_panel", &"greenhouse"])
+gain = "Cultivas tu propia comida."
+gain_en = "You grow your own food."
+loss = "El invernadero gasta mucha energía."
+loss_en = "The greenhouse uses a lot of energy."

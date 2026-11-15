@@ -1,0 +1,52 @@
+{
+  "id": "study_minerals",
+  "category": "main",
+  "order": 10,
+  "title": "Estudiar los minerales",
+  "description": "Cerca del campamento hay dos afloramientos. Toma una muestra de cada uno.",
+  "science": "Opportunity halló hematita en Meridiani, a veces en forma de canicas. Ese mineral se puede formar con agua. El olivino viene de la lava. Lugar real: Meridiani Planum, 0,04° S, 3,14° O (Mars Trek).",
+  "done": "Las dos muestras quedan anotadas, para comparar en la Tierra.",
+  "unlock": "fix_solar_panel",
+  "objectives": [
+    {
+      "id": "obj_1",
+      "type": "go_to",
+      "target": "mineral_hematite",
+      "label": "Llega al primer afloramiento",
+      "label_en": "Reach the first outcrop"
+    },
+    {
+      "id": "obj_2",
+      "type": "sample",
+      "target": "mineral_hematite",
+      "label": "Toma una muestra de hematita",
+      "seconds": 2.2,
+      "flag": "sampled_hematite",
+      "note": "Muestra de hematita guardada.",
+      "label_en": "Take a hematite sample",
+      "note_en": "Hematite sample stored."
+    },
+    {
+      "id": "obj_3",
+      "type": "sample",
+      "target": "mineral_olivine",
+      "label": "Toma una muestra del segundo afloramiento",
+      "seconds": 2.2,
+      "flag": "sampled_olivine",
+      "note": "Segunda muestra guardada.",
+      "label_en": "Take a sample from the second outcrop",
+      "note_en": "Second sample stored."
+    }
+  ],
+  "rewards": {
+    "energy": 0,
+    "food": 0,
+    "oxygen": 6,
+    "flag": "sampled_minerals"
+  },
+  "title_en": "Study the minerals",
+  "description_en": "Near camp there are two outcrops. Take a sample from each one.",
+  "science_en": "Opportunity found hematite at Meridiani, sometimes as little balls. That mineral can form with water. Olivine comes from lava. Real place: Meridiani Planum, 0.04° S, 3.14° W (Mars Trek).",
+  "done_en": "Both samples are written down, to compare on Earth.",
+  "min_sol": 2
+}

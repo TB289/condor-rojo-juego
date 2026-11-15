@@ -1,0 +1,27 @@
+{
+  "_note": "Gameplay values, not NASA measurements. Suit O2 drains outdoors and more slowly in caves; it does not drain or automatically regenerate inside the pressurized ship. The habitat oxygen station refills it on demand. Energy drains continuously at 10 units per real minute while awake, outdoors or indoors. Sleep restores energy.",
+  "resources": {
+    "oxygen": {
+      "start": 100,
+      "per_sol": 20,
+      "idle_per_minute": 14,
+      "walk_per_minute": 42,
+      "run_per_minute": 63,
+      "cave_scale": 0.38,
+      "interior_regen_per_minute": 40
+    },
+    "energy": {
+      "start": 100,
+      "per_sol": 15,
+      "idle_per_minute": 10
+    },
+    "food": {
+      "start": 100,
+      "per_sol": 20
+    },
+    "water": {
+      "start": 100,
+      "per_sol": 15
+    }
+  }
+}

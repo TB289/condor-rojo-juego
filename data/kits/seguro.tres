@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="KitData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://systems/KitData.gd" id="1_script"]
+
+[resource]
+script = ExtResource("1_script")
+id = &"seguro"
+display_name = "Seguro"
+display_name_en = "Safe"
+module_ids = Array[StringName]([&"habitat", &"solar_panel", &"oxygen_tank"])
+gain = "Mucho oxígeno de reserva."
+gain_en = "Lots of spare oxygen."
+loss = "No cultivas comida ni hablas con la Tierra."
+loss_en = "You don't grow food or talk to Earth."

@@ -1,0 +1,42 @@
+{
+  "id": "repair_support_rover",
+  "category": "main",
+  "order": 6,
+  "min_sol": 1,
+  "unlock": "fix_solar_panel",
+  "title": "Repara el rover Cóndor",
+  "title_en": "Repair the Cóndor rover",
+  "description": "El rover de apoyo necesita arreglar su sistema de tracción. Acércate y mantén E para repararlo.",
+  "description_en": "The support rover needs its drive system repaired. Reach it and hold E (or touch Interact) to repair it.",
+  "science": "Los rovers necesitan ruedas, motores y energía en buen estado para explorar terrenos marcianos.",
+  "science_en": "Rovers need working wheels, motors and electrical power to explore Martian terrain.",
+  "done": "¡Rover Cóndor reparado! Podrás conducirlo desde el Sol 2.",
+  "done_en": "Cóndor rover repaired! Driving unlocks on Sol 2.",
+  "objectives": [
+    {
+      "id": "obj_1",
+      "type": "go_to",
+      "target": "rover_support",
+      "label": "Acércate al rover de apoyo",
+      "label_en": "Reach the support rover"
+    },
+    {
+      "id": "obj_2",
+      "type": "repair",
+      "target": "rover_support",
+      "tool": "hand",
+      "seconds": 3.5,
+      "prompt": "Reparar rover",
+      "prompt_en": "Repair rover",
+      "label": "Mantén E para reparar el motor",
+      "label_en": "Hold E to repair the drive system",
+      "flag": "support_rover_repaired"
+    }
+  ],
+  "rewards": {
+    "energy": 0,
+    "oxygen": 0,
+    "food": 0,
+    "flag": "support_rover_repaired"
+  }
+}

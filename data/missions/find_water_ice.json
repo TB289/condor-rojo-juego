@@ -1,0 +1,40 @@
+{
+  "id": "find_water_ice",
+  "category": "main",
+  "order": 3,
+  "title": "Buscar hielo de agua",
+  "description": "Lejos de la base hay hielo de agua. Sigue el camino, recoge un poco y vuelve: afuera el traje gasta oxígeno.",
+  "science": "En Marte hay hielo de agua en los polos y debajo del suelo en otras zonas. Lugar real: Planum Boreum, 87,32° N, 54,96° E (Mars Trek).",
+  "done": "¡Tienes hielo! La base derrite un poco y saca agua. Del agua se puede separar oxígeno para respirar.",
+  "unlock": "fix_solar_panel",
+  "objectives": [
+    {
+      "id": "obj_1",
+      "type": "go_to",
+      "target": "ice_site",
+      "label": "Sigue el camino hasta el hielo",
+      "label_en": "Follow the path to the ice"
+    },
+    {
+      "id": "obj_2",
+      "type": "collect",
+      "target": "ice_site",
+      "prompt": "Recoger",
+      "prompt_en": "Pick up",
+      "label": "Recoge un poco de hielo",
+      "flag": "has_ice",
+      "label_en": "Pick up a little ice"
+    }
+  ],
+  "rewards": {
+    "energy": 0,
+    "food": 0,
+    "oxygen": 10,
+    "flag": "found_ice"
+  },
+  "title_en": "Look for water ice",
+  "description_en": "There is water ice far from the base. Follow the path, pick some up, and come back: outside, the suit uses oxygen.",
+  "science_en": "Mars has water ice at the poles and under the ground in other places. Real place: Planum Boreum, 87.32° N, 54.96° E (Mars Trek).",
+  "done_en": "You have ice! The base melts a little and takes out water. Oxygen to breathe can be split from that water.",
+  "min_sol": 2
+}

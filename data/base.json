@@ -1,0 +1,21 @@
+{
+  "_note": "Reglas de la base (valores de juego, no son datos NASA). Los aportes de cada módulo están en data/modules/*.tres.",
+  "modules": [
+    "habitat",
+    "solar_panel",
+    "greenhouse",
+    "oxygen_tank",
+    "antenna_dish"
+  ],
+  "kits": [
+    "seguro",
+    "granjero",
+    "explorador"
+  ],
+  "default_kit": "granjero",
+  "locked_modules": [
+    "habitat"
+  ],
+  "max_start_modules": 4,
+  "build_radius_tiles": 10
+}

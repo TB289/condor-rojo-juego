@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ModuleData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://systems/ModuleData.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://assets/art/base/oxygen_tank.png" id="2_tex"]
+
+[resource]
+script = ExtResource("1_script")
+id = &"oxygen_tank"
+display_name = "Tanques de oxígeno"
+display_name_en = "Oxygen tanks"
+description = "Guardan oxígeno de reserva y lo sueltan cada día. MOXIE, en Perseverance, sacó 122 g de oxígeno del aire de Marte. Sus bombas usan algo de energía."
+description_en = "They store spare oxygen and release some each day. MOXIE, on Perseverance, made 122 g of oxygen from Mars air. Their pumps use a little energy."
+texture = ExtResource("2_tex")
+size_tiles = Vector2i(2, 1)
+energy_cost_per_sol = 3.0
+oxygen_per_sol = 12.0

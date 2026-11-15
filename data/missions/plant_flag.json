@@ -1,0 +1,22 @@
+{
+  "id": "plant_flag",
+  "order": 1,
+  "unlock": "start",
+  "category": "main",
+  "title": "Plant the Ecuadorian flag",
+  "title_en": "Plant the Ecuadorian flag",
+  "requires_module": "habitat",
+  "objectives": [
+    {
+      "id": "obj_1",
+      "type": "collect",
+      "target": "flag_site",
+      "label": "Planta la bandera ecuatoriana (E o clic)",
+      "label_en": "Plant the Ecuadorian flag (E or click)",
+      "prompt": "Plantar",
+      "prompt_en": "Plant"
+    }
+  ],
+  "done": "La bandera ecuatoriana ya ondea en Marte.",
+  "done_en": "The Ecuadorian flag now flies on Mars."
+}

@@ -1,0 +1,73 @@
+{
+  "id": "jezero_samples",
+  "order": 15,
+  "unlock": "search_biosignatures",
+  "category": "main",
+  "title": "Sample Jezero minerals",
+  "title_en": "Sample Jezero minerals",
+  "objectives": [
+    {
+      "id": "obj_1",
+      "type": "go_to",
+      "target": "jezero_crater",
+      "label": "Llega al cráter Jezero",
+      "label_en": "Reach Jezero crater"
+    },
+    {
+      "id": "obj_2",
+      "type": "sample",
+      "target": "sample_silica",
+      "label": "Toma una muestra de sílice",
+      "label_en": "Take a silica sample",
+      "seconds": 2.0,
+      "flag": "sampled_silica",
+      "note": "Muestra de sílice guardada.",
+      "note_en": "Silica sample stored."
+    },
+    {
+      "id": "obj_3",
+      "type": "sample",
+      "target": "sample_phyllosilicates",
+      "label": "Toma una muestra de filosilicatos",
+      "label_en": "Take a phyllosilicate sample",
+      "seconds": 2.0,
+      "flag": "sampled_phyllosilicates",
+      "note": "Muestra de filosilicatos guardada.",
+      "note_en": "Phyllosilicate sample stored."
+    },
+    {
+      "id": "obj_4",
+      "type": "sample",
+      "target": "sample_sulfates",
+      "label": "Toma una muestra de sulfatos",
+      "label_en": "Take a sulfates sample",
+      "seconds": 2.0,
+      "flag": "sampled_sulfates",
+      "note": "Muestra de sulfatos guardada.",
+      "note_en": "Sulfates sample stored."
+    },
+    {
+      "id": "obj_5",
+      "type": "sample",
+      "target": "sample_chlorides",
+      "label": "Toma una muestra de cloruros",
+      "label_en": "Take a chloride sample",
+      "seconds": 2.0,
+      "flag": "sampled_chlorides",
+      "note": "Muestra de cloruros guardada.",
+      "note_en": "Chloride sample stored."
+    },
+    {
+      "id": "obj_6",
+      "type": "sample",
+      "target": "sample_carbonates",
+      "label": "Toma una muestra de carbonatos",
+      "label_en": "Take a carbonate sample",
+      "seconds": 2.0,
+      "flag": "sampled_carbonates",
+      "note": "Muestra de carbonatos guardada.",
+      "note_en": "Carbonate sample stored."
+    }
+  ],
+  "min_sol": 7
+}

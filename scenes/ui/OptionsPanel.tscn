@@ -1,0 +1,321 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scenes/ui/OptionsPanel.gd" id="1_script"]
+[ext_resource type="Theme" path="res://ui/theme/condor_theme.tres" id="2_theme"]
+
+[node name="OptionsPanel" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_theme")
+script = ExtResource("1_script")
+
+[node name="Dim" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.101961, 0.047059, 0.078431, 0.92)
+
+[node name="Center" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="PanelContainer" parent="Center"]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="Center/Panel"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 12
+
+[node name="Scroll" type="ScrollContainer" parent="Center/Panel/Margin"]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+follow_focus = true
+horizontal_scroll_mode = 0
+
+[node name="Column" type="VBoxContainer" parent="Center/Panel/Margin/Scroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
+
+[node name="Title" type="Label" parent="Center/Panel/Margin/Scroll/Column"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.878431, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Opciones"
+horizontal_alignment = 1
+
+[node name="MasterRow" type="HBoxContainer" parent="Center/Panel/Margin/Scroll/Column"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="MasterName" type="Label" parent="Center/Panel/Margin/Scroll/Column/MasterRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+text = "Volumen"
+vertical_alignment = 1
+
+[node name="Master" type="HSlider" parent="Center/Panel/Margin/Scroll/Column/MasterRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(180, 16)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="MasterValue" type="Label" parent="Center/Panel/Margin/Scroll/Column/MasterRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(48, 0)
+layout_mode = 2
+text = "100"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="MusicRow" type="HBoxContainer" parent="Center/Panel/Margin/Scroll/Column"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="MusicName" type="Label" parent="Center/Panel/Margin/Scroll/Column/MusicRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+text = "Música"
+vertical_alignment = 1
+
+[node name="Music" type="HSlider" parent="Center/Panel/Margin/Scroll/Column/MusicRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(180, 16)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="MusicValue" type="Label" parent="Center/Panel/Margin/Scroll/Column/MusicRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(48, 0)
+layout_mode = 2
+text = "100"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="SfxRow" type="HBoxContainer" parent="Center/Panel/Margin/Scroll/Column"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="SfxName" type="Label" parent="Center/Panel/Margin/Scroll/Column/SfxRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+text = "Efectos"
+vertical_alignment = 1
+
+[node name="Sfx" type="HSlider" parent="Center/Panel/Margin/Scroll/Column/SfxRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(180, 16)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="SfxValue" type="Label" parent="Center/Panel/Margin/Scroll/Column/SfxRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(48, 0)
+layout_mode = 2
+text = "100"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="ModeRow" type="HBoxContainer" parent="Center/Panel/Margin/Scroll/Column"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="ModeName" type="Label" parent="Center/Panel/Margin/Scroll/Column/ModeRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+text = "Pantalla"
+vertical_alignment = 1
+
+[node name="ModeWindow" type="Button" parent="Center/Panel/Margin/Scroll/Column/ModeRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 40)
+layout_mode = 2
+toggle_mode = true
+text = "Ventana"
+
+[node name="ModeFull" type="Button" parent="Center/Panel/Margin/Scroll/Column/ModeRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 40)
+layout_mode = 2
+toggle_mode = true
+text = "Completa"
+
+[node name="ScaleRow" type="HBoxContainer" parent="Center/Panel/Margin/Scroll/Column"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="ScaleName" type="Label" parent="Center/Panel/Margin/Scroll/Column/ScaleRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+text = "Escala"
+vertical_alignment = 1
+
+[node name="Scale2" type="Button" parent="Center/Panel/Margin/Scroll/Column/ScaleRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(72, 40)
+layout_mode = 2
+toggle_mode = true
+text = "2x"
+
+[node name="Scale3" type="Button" parent="Center/Panel/Margin/Scroll/Column/ScaleRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(72, 40)
+layout_mode = 2
+toggle_mode = true
+text = "3x"
+
+[node name="Scale4" type="Button" parent="Center/Panel/Margin/Scroll/Column/ScaleRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(72, 40)
+layout_mode = 2
+toggle_mode = true
+text = "4x"
+
+[node name="ScaleFit" type="Button" parent="Center/Panel/Margin/Scroll/Column/ScaleRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(96, 40)
+layout_mode = 2
+toggle_mode = true
+text = "Ajustar"
+
+[node name="VsyncRow" type="HBoxContainer" parent="Center/Panel/Margin/Scroll/Column"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="VsyncName" type="Label" parent="Center/Panel/Margin/Scroll/Column/VsyncRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+text = "Vsync"
+vertical_alignment = 1
+
+[node name="VsyncOn" type="Button" parent="Center/Panel/Margin/Scroll/Column/VsyncRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(72, 40)
+layout_mode = 2
+toggle_mode = true
+text = "Sí"
+
+[node name="VsyncOff" type="Button" parent="Center/Panel/Margin/Scroll/Column/VsyncRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(72, 40)
+layout_mode = 2
+toggle_mode = true
+text = "No"
+
+[node name="LangRow" type="HBoxContainer" parent="Center/Panel/Margin/Scroll/Column"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="LangName" type="Label" parent="Center/Panel/Margin/Scroll/Column/LangRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+text = "Idioma"
+vertical_alignment = 1
+
+[node name="Es" type="Button" parent="Center/Panel/Margin/Scroll/Column/LangRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 40)
+layout_mode = 2
+toggle_mode = true
+text = "Español"
+
+[node name="En" type="Button" parent="Center/Panel/Margin/Scroll/Column/LangRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 40)
+layout_mode = 2
+toggle_mode = true
+text = "English"
+
+[node name="TouchRow" type="HBoxContainer" parent="Center/Panel/Margin/Scroll/Column"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="TouchName" type="Label" parent="Center/Panel/Margin/Scroll/Column/TouchRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+text = "Controles táctiles"
+vertical_alignment = 1
+
+[node name="TouchAuto" type="Button" parent="Center/Panel/Margin/Scroll/Column/TouchRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(88, 40)
+layout_mode = 2
+toggle_mode = true
+text = "Auto"
+
+[node name="TouchYes" type="Button" parent="Center/Panel/Margin/Scroll/Column/TouchRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(72, 40)
+layout_mode = 2
+toggle_mode = true
+text = "Sí"
+
+[node name="TouchNo" type="Button" parent="Center/Panel/Margin/Scroll/Column/TouchRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(72, 40)
+layout_mode = 2
+toggle_mode = true
+text = "No"
+
+[node name="TutorialRow" type="HBoxContainer" parent="Center/Panel/Margin/Scroll/Column"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="TutorialName" type="Label" parent="Center/Panel/Margin/Scroll/Column/TutorialRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+text = "Tutorial"
+vertical_alignment = 1
+
+[node name="TutorialAgain" type="Button" parent="Center/Panel/Margin/Scroll/Column/TutorialRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(180, 40)
+layout_mode = 2
+text = "Repetir tutorial"
+
+[node name="Back" type="Button" parent="Center/Panel/Margin/Scroll/Column"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(160, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Volver"

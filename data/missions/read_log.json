@@ -1,0 +1,41 @@
+{
+  "id": "read_log",
+  "category": "secondary",
+  "order": 7,
+  "title": "La bitácora",
+  "description": "En la consola del hábitat puedes revisar lo que pasó hoy.",
+  "science": "Los astronautas anotan lo que pasa cada día. Esa bitácora ayuda a la Tierra a seguir la misión.",
+  "done": "Bitácora al día. INTI guarda una copia para la Tierra.",
+  "unlock": "sort_supplies",
+  "requires_module": "habitat",
+  "objectives": [
+    {
+      "id": "obj_1",
+      "type": "enter",
+      "target": "habitat",
+      "label": "Entra al hábitat",
+      "label_en": "Enter the habitat"
+    },
+    {
+      "id": "obj_2",
+      "type": "repair",
+      "target": "habitat_console",
+      "prompt": "Leer",
+      "prompt_en": "Read",
+      "label": "Revisa la bitácora",
+      "seconds": 1.5,
+      "label_en": "Check the log"
+    }
+  ],
+  "rewards": {
+    "energy": 0,
+    "food": 0,
+    "oxygen": 0,
+    "flag": "read_the_log"
+  },
+  "title_en": "The log",
+  "description_en": "On the habitat console you can check what happened today.",
+  "science_en": "Astronauts write down what happens each day. That log helps Earth follow the mission.",
+  "done_en": "Log up to date. INTI keeps a copy for Earth.",
+  "min_sol": 4
+}

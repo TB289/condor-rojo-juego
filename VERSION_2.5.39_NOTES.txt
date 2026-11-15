@@ -1,0 +1,23 @@
+Cóndor Rojo v2.5.39 — Clock and radiation HUD update
+
+Clock:
+- All Sols share the same 06:00-to-05:00 linear clock progression.
+- Sol duration: 211.765 seconds (180 / 0.85), 15% lower advance speed than the configured 180s Sol.
+- The displayed clock, lighting, and oxygen-tank recharge use the same timing.
+
+HUD:
+- Third green bar is Radiation Shielding, not Food.
+- Food is still tracked for farming, meals, journals and survival; it is simply not in the minimap ring.
+- Radiation shielding decreases with dangerous solar-storm exposure and recovers in shelter/after the storm.
+- Upper-left Dose label shows the current day's mSv, starting from the daily background each dawn.
+- The final report still uses cumulative mSv, which is not scientifically reset.
+
+Solar storm (Sol 3):
+- Warn 15 real seconds before solar particles arrive.
+- Display the numeric countdown only for the final five seconds (5, 4, 3, 2, 1).
+- Existing dangerous exposure window and shelter mechanics retained.
+- The visible radiation effect fades gradually in the evening.
+
+Original Sol 1 sandstorm and ten-Sol mission schedule are retained.
+
+Validation: JSON and referenced assets checked; no Godot executable available for in-engine testing.

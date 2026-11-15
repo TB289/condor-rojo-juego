@@ -1,0 +1,38 @@
+{
+  "id": "dust_shelter",
+  "category": "secondary",
+  "order": 17,
+  "title": "La tormenta de polvo",
+  "description": "Hay polvo en el cielo. Entra al hábitat: solo adentro cuenta como refugio. Aguanta hasta mañana.",
+  "science": "Una tormenta de polvo puede tapar el cielo y bajar la luz que llega a los paneles.",
+  "done": "Pasó lo peor de la tormenta. El hábitat te cuidó.",
+  "unlock": "event:live_dust_storm",
+  "requires_module": "habitat",
+  "objectives": [
+    {
+      "id": "obj_1",
+      "type": "enter",
+      "target": "habitat",
+      "label": "Entra al hábitat",
+      "label_en": "Enter the habitat"
+    },
+    {
+      "id": "obj_2",
+      "type": "survive_days",
+      "days": 1,
+      "label": "Aguanta hasta mañana",
+      "label_en": "Hold on until tomorrow"
+    }
+  ],
+  "rewards": {
+    "energy": 0,
+    "food": 0,
+    "oxygen": 0,
+    "flag": "survived_storm"
+  },
+  "title_en": "The dust storm",
+  "description_en": "There is dust in the sky. Enter the habitat: only inside counts as shelter. Hold on until tomorrow.",
+  "science_en": "A dust storm can cover the sky and lower the light that reaches the panels.",
+  "done_en": "The worst of the storm passed. The habitat looked after you.",
+  "min_sol": 1
+}

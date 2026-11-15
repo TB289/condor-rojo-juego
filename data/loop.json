@@ -1,0 +1,82 @@
+{
+  "_note": "Números de la partida (no son datos NASA). La cena reemplaza el consumo de comida por sol: Normal gasta lo mismo que resources.json food.per_sol. Los paneles pagan los módulos; la batería paga el consumo de energía.",
+  "sol_seconds": 211.765,
+  "mission_sols": 10,
+  "day_color": [
+    1.0,
+    0.84,
+    0.66
+  ],
+  "night_color": [
+    0.2,
+    0.22,
+    0.36
+  ],
+  "dust_solar_multiplier": 0.5,
+  "panel_weak_multiplier": 0.5,
+  "exemplary_min_resource": 25,
+  "exemplary_max_skipped_meals": 2,
+  "exemplary_max_dose_msv": 12.0,
+  "radiation": {
+    "_note": "daily_msv es dato real (Curiosity RAD, 0,67 mSv por día). mult_interior 0,5 es el 50 % de NASA OCHMO contra partículas de tormenta. El resto de este bloque es valor de juego: la dosis de tormenta, el refugio a 0,25, los segundos, el ejercicio y la escala de la luz.",
+    "daily_msv": 0.67,
+    "storm_level2_msv": 2.0,
+    "storm_level3_msv": 5.0,
+    "mult_outside": 1.0,
+    "mult_interior": 0.5,
+    "mult_refuge": 0.25,
+    "warning_seconds": 15,
+    "window_seconds": 60,
+    "window_start_min": 0.25,
+    "window_start_max": 0.6,
+    "light_seconds_per_minute": 2,
+    "exercise_energy": -2,
+    "exercise_food": -2,
+    "exercise_seconds": 3,
+    "weak_after_days": 2,
+    "weak_run_scale": 0.85,
+    "weak_jump_scale": 0.85,
+    "shelter_food": 6,
+    "shelter_energy": 4,
+    "seal_energy": 2,
+    "plan_food": 6
+  },
+  "rations": [
+    {
+      "id": "none",
+      "label": "Nada",
+      "detail": "Sin cena. Amaneces cansado.",
+      "effects": {
+        "oxygen": 8,
+        "energy": -16,
+        "food": 0
+      },
+      "label_en": "Nothing",
+      "detail_en": "No dinner. You wake up tired."
+    },
+    {
+      "id": "half",
+      "label": "Media",
+      "detail": "Plato corto. Sigues con fuerzas.",
+      "effects": {
+        "oxygen": 5,
+        "energy": 4,
+        "food": -8
+      },
+      "label_en": "Half",
+      "detail_en": "A small plate. You still have strength."
+    },
+    {
+      "id": "normal",
+      "label": "Normal",
+      "detail": "Cenas bien y ganas fuerza.",
+      "effects": {
+        "oxygen": 0,
+        "energy": 10,
+        "food": -20
+      },
+      "label_en": "Normal",
+      "detail_en": "You eat well and gain strength."
+    }
+  ]
+}

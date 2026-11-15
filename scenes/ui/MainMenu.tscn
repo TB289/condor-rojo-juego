@@ -1,0 +1,249 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://scenes/ui/MainMenu.gd" id="1_script"]
+[ext_resource type="Theme" path="res://ui/theme/condor_theme.tres" id="2_theme"]
+[ext_resource type="PackedScene" path="res://scenes/ui/OptionsPanel.tscn" id="3_options"]
+[ext_resource type="Script" path="res://scenes/ui/MarsVista.gd" id="4_vista"]
+[ext_resource type="Script" path="res://scenes/ui/PixelTitle.gd" id="5_title"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_theme")
+script = ExtResource("1_script")
+
+[node name="Vista" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("4_vista")
+show_camp = true
+veil = true
+
+[node name="MenuPanel" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 10.0
+offset_right = 280.0
+offset_bottom = 250.0
+mouse_filter = 2
+
+[node name="Margin" type="MarginContainer" parent="MenuPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 0
+
+[node name="Column" type="VBoxContainer" parent="MenuPanel/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="Title" type="Control" parent="MenuPanel/Margin/Column"]
+custom_minimum_size = Vector2(240, 58)
+layout_mode = 2
+mouse_filter = 2
+script = ExtResource("5_title")
+
+[node name="Subtitle" type="Label" parent="MenuPanel/Margin/Column"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.988235, 0.909804, 1)
+theme_override_font_sizes/font_size = 16
+text = "El primer astronauta ecuatoriano"
+horizontal_alignment = 0
+autowrap_mode = 3
+
+[node name="Play" type="Button" parent="MenuPanel/Margin/Column"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 22)
+layout_mode = 2
+text = "Nueva partida"
+
+[node name="Continue" type="Button" parent="MenuPanel/Margin/Column"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 22)
+layout_mode = 2
+disabled = true
+focus_mode = 0
+text = "Continuar"
+
+[node name="OptionsButton" type="Button" parent="MenuPanel/Margin/Column"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 22)
+layout_mode = 2
+text = "Opciones"
+
+[node name="How" type="Button" parent="MenuPanel/Margin/Column"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 22)
+layout_mode = 2
+text = "Cómo jugar"
+
+[node name="Nasa" type="Button" parent="MenuPanel/Margin/Column"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 22)
+layout_mode = 2
+text = "Datos de la NASA"
+
+[node name="Credits" type="Button" parent="MenuPanel/Margin/Column"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 22)
+layout_mode = 2
+text = "Créditos"
+
+[node name="Quit" type="Button" parent="MenuPanel/Margin/Column"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 22)
+layout_mode = 2
+text = "Salir"
+
+[node name="HowPanel" type="Control" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Dim" type="ColorRect" parent="HowPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0509804, 0.0705882, 0.109804, 0.88)
+
+[node name="Center" type="CenterContainer" parent="HowPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="PanelContainer" parent="HowPanel/Center"]
+custom_minimum_size = Vector2(560, 0)
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="HowPanel/Center/Panel"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 12
+
+[node name="Column" type="VBoxContainer" parent="HowPanel/Center/Panel/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="HowTitle" type="Label" parent="HowPanel/Center/Panel/Margin/Column"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.878431, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Cómo jugar"
+horizontal_alignment = 1
+
+[node name="HowBody" type="Label" parent="HowPanel/Center/Panel/Margin/Column"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.988235, 0.909804, 1)
+text = "Camina con W A S D o las flechas."
+autowrap_mode = 3
+
+[node name="HowBack" type="Button" parent="HowPanel/Center/Panel/Margin/Column"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(160, 36)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Volver"
+
+[node name="CreditsPanel" type="Control" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Dim" type="ColorRect" parent="CreditsPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0509804, 0.0705882, 0.109804, 0.88)
+
+[node name="Center" type="CenterContainer" parent="CreditsPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="PanelContainer" parent="CreditsPanel/Center"]
+custom_minimum_size = Vector2(560, 280)
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="CreditsPanel/Center/Panel"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 12
+
+[node name="Column" type="VBoxContainer" parent="CreditsPanel/Center/Panel/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="CreditsTitle" type="Label" parent="CreditsPanel/Center/Panel/Margin/Column"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.878431, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Créditos"
+horizontal_alignment = 1
+
+[node name="CreditsScroll" type="ScrollContainer" parent="CreditsPanel/Center/Panel/Margin/Column"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 160)
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="CreditsBody" type="Label" parent="CreditsPanel/Center/Panel/Margin/Column/CreditsScroll"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 0.988235, 0.909804, 1)
+text = "Cóndor Rojo"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="CreditsBack" type="Button" parent="CreditsPanel/Center/Panel/Margin/Column"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(160, 36)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Volver"
+
+[node name="Options" parent="." instance=ExtResource("3_options")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1

@@ -1,0 +1,74 @@
+{
+  "id": "recover_rovers",
+  "category": "main",
+  "order": 11,
+  "title": "Recuperar los rovers",
+  "description": "Opportunity y Spirit ya no se mueven. Baja la bitácora de cada uno. No hay que llevárselos.",
+  "science": "Spirit quedó atascada en suelo blando en 2009 y en silencio desde marzo de 2010; recorrió 7,73 km. Opportunity duró casi 15 años, más de 45 km, y su última comunicación fue el 10 de junio de 2018. Sojourner llegó en 1997 con Pathfinder. Curiosity y Perseverance no son chatarra de esta misión. Lugar real: Gusev, 14,53° S, 175,52° E (Mars Trek). Lugar real: Meridiani Planum, 0,04° S, 3,14° O (Mars Trek).",
+  "done": "Bajaste los datos de Opportunity y de Spirit. Esos rovers ya no andan. Curiosity y Perseverance no se rescatan aquí.",
+  "unlock": [
+    "day:4",
+    "study_minerals"
+  ],
+  "objectives": [
+    {
+      "id": "obj_1",
+      "type": "go_to",
+      "target": "rover_opportunity",
+      "label": "Llega a Opportunity",
+      "label_en": "Reach Opportunity"
+    },
+    {
+      "id": "obj_2",
+      "type": "recover",
+      "target": "rover_opportunity",
+      "label": "Recupera los datos de Opportunity",
+      "seconds": 2.5,
+      "flag": "has_opp_data",
+      "note": "Bitácora de Opportunity copiada.",
+      "label_en": "Recover Opportunity's data",
+      "note_en": "Opportunity's log copied."
+    },
+    {
+      "id": "obj_3",
+      "type": "go_to",
+      "target": "rover_spirit",
+      "label": "Llega a Spirit",
+      "label_en": "Reach Spirit"
+    },
+    {
+      "id": "obj_4",
+      "type": "recover",
+      "target": "rover_spirit",
+      "label": "Recupera los datos de Spirit",
+      "seconds": 2.5,
+      "flag": "has_spirit_data",
+      "note": "Bitácora de Spirit copiada.",
+      "label_en": "Recover Spirit's data",
+      "note_en": "Spirit's log copied."
+    },
+    {
+      "id": "obj_5",
+      "type": "recover",
+      "target": "rover_sojourner",
+      "label": "Si lo ves, recupera datos de Sojourner",
+      "seconds": 2.0,
+      "optional": true,
+      "flag": "has_sojourner_data",
+      "note": "Datos de Sojourner guardados. Era opcional.",
+      "label_en": "If you see it, recover Sojourner's data",
+      "note_en": "Sojourner's data stored. It was optional."
+    }
+  ],
+  "rewards": {
+    "energy": 6,
+    "food": 0,
+    "oxygen": 0,
+    "flag": "has_rover_logs"
+  },
+  "title_en": "Recover the rovers",
+  "description_en": "Opportunity and Spirit no longer move. Download each one's log. You do not take the rovers with you.",
+  "science_en": "Spirit got stuck in soft soil in 2009 and went silent in March 2010; it drove 7.73 km. Opportunity lasted almost 15 years, more than 45 km, and its last communication was June 10, 2018. Sojourner arrived in 1997 with Pathfinder. Curiosity and Perseverance are not scrap from this mission. Real place: Gusev, 14.53° S, 175.52° E (Mars Trek). Real place: Meridiani Planum, 0.04° S, 3.14° W (Mars Trek).",
+  "done_en": "You downloaded the data from Opportunity and Spirit. Those rovers no longer run. Curiosity and Perseverance are not rescued here.",
+  "min_sol": 4
+}

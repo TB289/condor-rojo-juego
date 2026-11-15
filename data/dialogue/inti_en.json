@@ -1,0 +1,285 @@
+{
+  "triggers": {
+    "game_start": [
+      {
+        "text": "Hi. I'm INTI, the voice of the base. On Mars you walk a little lighter.",
+        "tip": "gravity"
+      },
+      {
+        "text": "You can move now. If you want a hint, press Tab.",
+        "tip": ""
+      },
+      {
+        "text": "This is your base. I watch the oxygen, energy, and radiation shielding.",
+        "tip": ""
+      }
+    ],
+    "first_outside": [
+      {
+        "text": "You left the base area. Outside, the suit uses oxygen faster.",
+        "tip": "thin_air"
+      },
+      {
+        "text": "Outside, the ground is Mars. It is very cold, and the habitat is the covered place.",
+        "tip": "cold"
+      },
+      {
+        "text": "The base is behind you. You can go on or turn back. The water on Mars is frozen.",
+        "tip": "water_ice"
+      }
+    ],
+    "oxygen_low": [
+      {
+        "text": "Oxygen dropped under a quarter. Outside, the suit uses it faster.",
+        "tip": "thin_air"
+      },
+      {
+        "text": "There is little air left in the reserve. Every minute away from the base matters more.",
+        "tip": ""
+      },
+      {
+        "text": "Watch the cyan bar. If it hits zero, the mission stops and asks for a rescue.",
+        "tip": ""
+      }
+    ],
+    "energy_low": [
+      {
+        "text": "Energy is low. The panels charge the battery when the sun reaches them.",
+        "tip": "dust_power"
+      },
+      {
+        "text": "The battery is low. Dust on the panels makes them charge less.",
+        "tip": ""
+      },
+      {
+        "text": "The yellow bar is weak. At night, each module that is on uses some of that energy.",
+        "tip": ""
+      }
+    ],
+    "food_low": [
+      {
+        "text": "There is little food left. The greenhouse can add some if it has energy.",
+        "tip": "plants"
+      },
+      {
+        "text": "The green bar is low. At dinner, a bigger meal fills more and costs more.",
+        "tip": ""
+      },
+      {
+        "text": "Food is tight. A harvest moves that bar.",
+        "tip": ""
+      }
+    ],
+    "new_day": [
+      {
+        "text": "Day {day} is starting. On Mars the day lasts a little longer than on Earth.",
+        "tip": "sol_length"
+      },
+      {
+        "text": "Good morning. The three bars are still up there: oxygen, energy, and shielding.",
+        "tip": ""
+      },
+      {
+        "text": "Another day at the base. Last night is written in the journal.",
+        "tip": ""
+      }
+    ],
+    "before_decision": [
+      {
+        "text": "There is a decision. I tell you the cost; the choice is yours.",
+        "tip": ""
+      },
+      {
+        "text": "Read the options calmly. Each one moves the bars a little.",
+        "tip": ""
+      },
+      {
+        "text": "There is not just one answer. Think about what the base needs most today.",
+        "tip": ""
+      }
+    ],
+    "event_dust_storm": [
+      {
+        "text": "Dust arrived. It sticks to the panels and takes away their power.",
+        "tip": "dust_power"
+      },
+      {
+        "text": "The sky filled with dust. While it lasts, the panels see less sun.",
+        "tip": ""
+      },
+      {
+        "text": "The dust can last more than a day. In that time the panels make less.",
+        "tip": ""
+      }
+    ],
+    "event_solar_storm": [
+      {
+        "text": "There is a solar storm. The habitat covers you better than the suit alone.",
+        "tip": ""
+      },
+      {
+        "text": "The Sun sent out a burst. Inside the habitat there is more protection.",
+        "tip": ""
+      },
+      {
+        "text": "This storm does not look like rain. The shelter is the habitat.",
+        "tip": ""
+      }
+    ],
+    "event_earth_message": [
+      {
+        "text": "A message arrived from Earth. The signal takes time: it is not instant.",
+        "tip": "comms_delay"
+      },
+      {
+        "text": "They are writing from home. The message traveled for several minutes to get here.",
+        "tip": "comms_delay"
+      },
+      {
+        "text": "There is news from Earth. The antenna is for answering. Without it, you can leave the reply written down.",
+        "tip": ""
+      }
+    ],
+    "event_panel_fail": [
+      {
+        "text": "A panel is not turning well. If it stays like that, it will make less power for a couple of days.",
+        "tip": ""
+      },
+      {
+        "text": "A panel has a fault. Going out to look at it uses oxygen. Leaving it keeps it weak.",
+        "tip": ""
+      },
+      {
+        "text": "The panel needs attention. One path uses air; the other leaves less energy.",
+        "tip": ""
+      }
+    ],
+    "event_harvest": [
+      {
+        "text": "There are plants ready in the greenhouse.",
+        "tip": "plants"
+      },
+      {
+        "text": "Time to look at the harvest. Cutting today gives food now. Letting it grow changes tomorrow's.",
+        "tip": ""
+      },
+      {
+        "text": "The greenhouse potatoes follow a real idea: soil like Mars soil, with compost.",
+        "tip": "plants"
+      }
+    ],
+    "event_meteorite": [
+      {
+        "text": "A little rock from the sky hit a module. It is not huge.",
+        "tip": ""
+      },
+      {
+        "text": "A small meteor touched the base. Repairing uses supplies. Isolating the module leaves it still.",
+        "tip": ""
+      },
+      {
+        "text": "You can patch the hit, or isolate the module. Each path changes the base in a different way.",
+        "tip": ""
+      }
+    ],
+    "rescue": [
+      {
+        "text": "A resource hit zero. We stop and ask for a rescue. You are safe.",
+        "tip": ""
+      },
+      {
+        "text": "A bar emptied. Help is coming. What matters is that you are all right.",
+        "tip": ""
+      },
+      {
+        "text": "We started the rescue protocol. The mission stops and you are safe.",
+        "tip": ""
+      }
+    ],
+    "mission_complete": [
+      {
+        "text": "You reached the end of the days. The mission is over.",
+        "tip": ""
+      },
+      {
+        "text": "You finished the mission. In the summary you will see your decisions.",
+        "tip": ""
+      },
+      {
+        "text": "The mission days are over. Now you can see how it went.",
+        "tip": ""
+      }
+    ]
+  },
+  "hints": [
+    {
+      "when": { "resource": "oxygen", "below": 25 },
+      "text": "Oxygen is under 25. Outside it drops faster. The habitat looks after it better.",
+      "tip": "thin_air"
+    },
+    {
+      "when": { "resource": "energy", "below": 25 },
+      "text": "Energy is under 25. If dust is on the panels, they charge less.",
+      "tip": "dust_power"
+    },
+    {
+      "when": { "resource": "food", "below": 25 },
+      "text": "Food is under 25. The greenhouse and the night meal move that bar.",
+      "tip": "plants"
+    },
+    {
+      "when": { "event": "dust_storm" },
+      "text": "There is dust in the air. The panels make less power while the dust covers them.",
+      "tip": "dust_power"
+    },
+    {
+      "when": { "event": "solar_storm" },
+      "text": "There is a solar storm. The habitat protects you more than being outside.",
+      "tip": ""
+    },
+    {
+      "when": { "outside": true },
+      "text": "You are outside the base area. The suit uses oxygen faster here.",
+      "tip": "water_ice"
+    },
+    {
+      "when": { "default": true },
+      "text": "You can walk, look at a module with E, and sleep in the bed to end the Day. Tab asks for a hint.",
+      "tip": "glossary"
+    }
+  ],
+  "tips": {
+    "thin_air": {
+      "text": "The air on Mars is very thin and has almost no oxygen. That is why we live in a habitat and go out in a suit.",
+      "credit": "NASA"
+    },
+    "sol_length": {
+      "text": "A day on Mars lasts about 24 hours and 39 minutes, a little longer than on Earth. Here we call it a Day.",
+      "credit": "NASA"
+    },
+    "gravity": {
+      "text": "Mars gravity is lower than Earth's: you would weigh less than half. Walking feels different.",
+      "credit": "NASA"
+    },
+    "dust_power": {
+      "text": "Mars dust sticks to the solar panels and takes away their power. Sometimes the wind cleans them a little.",
+      "credit": "NASA (missions with panels, such as InSight)"
+    },
+    "water_ice": {
+      "text": "Mars has water ice, mostly at the poles and under the ground in other places. It is not a river: it is frozen.",
+      "credit": "NASA"
+    },
+    "comms_delay": {
+      "text": "A message between Mars and Earth takes 3 to 22 minutes one way, depending on how far apart they are that day. It is not instant.",
+      "credit": "NASA"
+    },
+    "cold": {
+      "text": "Mars is usually very cold, often below minus 60 degrees. The habitat covers us from that and from the wind.",
+      "credit": "NASA"
+    },
+    "plants": {
+      "text": "On Earth, scientists have already grown plants in soil like Mars soil, with compost. In the game, the greenhouse potato follows that idea.",
+      "credit": "NASA / research on regolith simulants"
+    }
+  }
+}

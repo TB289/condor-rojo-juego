@@ -1,0 +1,182 @@
+[gd_scene load_steps=16 format=3]
+
+[ext_resource type="Script" path="res://scenes/ui/HUD.gd" id="1_script"]
+[ext_resource type="Theme" path="res://ui/theme/condor_theme.tres" id="2_theme"]
+[ext_resource type="PackedScene" path="res://scenes/ui/ResourceBar.tscn" id="3_bar"]
+[ext_resource type="Texture2D" path="res://assets/art/ui/icon_oxygen.png" id="4_oxygen"]
+[ext_resource type="Texture2D" path="res://assets/art/ui/icon_energy.png" id="5_energy"]
+[ext_resource type="Texture2D" path="res://assets/art/ui/icon_shielding.png" id="6_food"]
+[ext_resource type="Texture2D" path="res://assets/art/ui/icon_water.png" id="7_water"]
+[ext_resource type="FontFile" path="res://assets/fonts/m5x7.ttf" id="8_font"]
+[ext_resource type="Script" path="res://scenes/ui/Minimap.gd" id="9_map"]
+[ext_resource type="Script" path="res://scenes/ui/ResourceRing.gd" id="10_ring"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_sol"]
+font = ExtResource("8_font")
+font_size = 16
+font_color = Color(1, 0.988235, 0.909804, 1)
+outline_size = 1
+outline_color = Color(0.227451, 0.101961, 0.156863, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_mission_title"]
+font = ExtResource("8_font")
+font_size = 16
+font_color = Color(1, 0.878431, 0, 1)
+outline_size = 1
+outline_color = Color(0.227451, 0.101961, 0.156863, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_other"]
+font = ExtResource("8_font")
+font_size = 16
+font_color = Color(0.478431, 0.54902, 0.603922, 1)
+outline_size = 1
+outline_color = Color(0.227451, 0.101961, 0.156863, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_work_bg"]
+bg_color = Color(0.227451, 0.282353, 0.329412, 1)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_work_fill"]
+bg_color = Color(0.243137, 0.831373, 0.909804, 1)
+anti_aliasing = false
+
+[node name="HUD" type="CanvasLayer"]
+layer = 5
+script = ExtResource("1_script")
+
+[node name="Root" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("2_theme")
+
+[node name="ResourcesPanel" type="PanelContainer" parent="Root"]
+visible = false
+layout_mode = 0
+offset_left = 6.0
+offset_top = 6.0
+mouse_filter = 2
+
+[node name="Bars" type="VBoxContainer" parent="Root/ResourcesPanel"]
+layout_mode = 2
+theme_override_constants/separation = 3
+
+[node name="Oxygen" parent="Root/ResourcesPanel/Bars" instance=ExtResource("3_bar")]
+layout_mode = 2
+resource_id = &"oxygen"
+title = "Oxígeno"
+icon = ExtResource("4_oxygen")
+color = Color(0.243137, 0.831373, 0.909804, 1)
+
+[node name="Energy" parent="Root/ResourcesPanel/Bars" instance=ExtResource("3_bar")]
+layout_mode = 2
+resource_id = &"energy"
+title = "Energía"
+icon = ExtResource("5_energy")
+color = Color(1, 0.878431, 0, 1)
+
+[node name="Shielding" parent="Root/ResourcesPanel/Bars" instance=ExtResource("3_bar")]
+layout_mode = 2
+resource_id = &"shielding"
+title = "Blindaje"
+icon = ExtResource("6_food")
+color = Color(0.54902, 0.909804, 0.27451, 1)
+
+[node name="Water" parent="Root/ResourcesPanel/Bars" instance=ExtResource("3_bar")]
+layout_mode = 2
+resource_id = &"water"
+title = "Agua"
+icon = ExtResource("7_water")
+color = Color(0.290196, 0.415686, 0.533333, 1)
+
+[node name="SolPanel" type="PanelContainer" parent="Root"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -48.0
+offset_top = 6.0
+offset_right = 48.0
+offset_bottom = 48.0
+grow_horizontal = 2
+mouse_filter = 2
+
+[node name="Sol" type="Label" parent="Root/SolPanel"]
+layout_mode = 2
+mouse_filter = 2
+text = "Día 1"
+label_settings = SubResource("LabelSettings_sol")
+horizontal_alignment = 1
+
+[node name="MissionPanel" type="PanelContainer" parent="Root"]
+visible = false
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -182.0
+offset_top = 6.0
+offset_right = -6.0
+offset_bottom = 72.0
+grow_horizontal = 0
+mouse_filter = 0
+
+[node name="Content" type="VBoxContainer" parent="Root/MissionPanel"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 2
+
+[node name="Title" type="Label" parent="Root/MissionPanel/Content"]
+layout_mode = 2
+mouse_filter = 2
+text = "Misión"
+label_settings = SubResource("LabelSettings_mission_title")
+autowrap_mode = 3
+
+[node name="Objectives" type="VBoxContainer" parent="Root/MissionPanel/Content"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 0
+
+[node name="Other" type="Label" parent="Root/MissionPanel/Content"]
+visible = false
+layout_mode = 2
+mouse_filter = 2
+label_settings = SubResource("LabelSettings_other")
+autowrap_mode = 3
+
+[node name="Work" type="ProgressBar" parent="Root/MissionPanel/Content"]
+custom_minimum_size = Vector2(0, 5)
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_work_bg")
+theme_override_styles/fill = SubResource("StyleBoxFlat_work_fill")
+max_value = 1.0
+step = 0.0
+show_percentage = false
+
+[node name="Minimap" type="Control" parent="Root"]
+process_mode = 3
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -86.0
+offset_top = -86.0
+offset_right = -6.0
+offset_bottom = -6.0
+grow_horizontal = 0
+grow_vertical = 0
+mouse_filter = 2
+script = ExtResource("9_map")
+
+[node name="ResourceRing" type="Control" parent="Root"]
+layout_mode = 0
+mouse_filter = 0
+script = ExtResource("10_ring")

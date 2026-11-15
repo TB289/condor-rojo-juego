@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ModuleData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://systems/ModuleData.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://assets/art/base/habitat.png" id="2_tex"]
+
+[resource]
+script = ExtResource("1_script")
+id = &"habitat"
+display_name = "Hábitat"
+display_name_en = "Habitat"
+description = "Tu casa en Marte. Limpia un poco el aire y te protege en las tormentas."
+description_en = "Your home on Mars. It cleans the air a little and protects you in storms."
+texture = ExtResource("2_tex")
+size_tiles = Vector2i(4, 3)
+energy_cost_per_sol = 4.0
+oxygen_per_sol = 8.0
+is_shelter = true

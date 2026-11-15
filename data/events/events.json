@@ -1,0 +1,295 @@
+{
+  "_note": "Eventos de juego. Campos: id, title, text, sol_minimo, weight, when (journal por defecto, o day), requires_module, requires_placed_module, if (dust_sols_left, panel_weak_sols_left, flag, damaged_module), once (per_sol o per_run), options. Cada opción puede traer effects de oxygen, energy, food y flags: damage_module, message_delay_seconds, message_text, bonus_food, panel_weak_sols, dust_sols, o un flag cualquiera. when=day no abre el diario: es un aviso, como mucho uno por Día. La luz entre Marte y la Tierra tarda entre 3 y 22 minutos (NASA Mars Relay). No es un dato en vivo. En la partida, la respuesta usa el retraso del Día (1 minuto de luz = 2 segundos de juego). solar_storm queda con weight 0: el aviso real lo arma NasaData.",
+  "events": [
+    {
+      "id": "dust_storm",
+      "when": "journal",
+      "title": "Después de la tormenta",
+      "text": "La tormenta de hoy dejó polvo en el panel solar. Decide cómo recuperarte.",
+      "sol_minimo": 1,
+      "weight": 4,
+      "options": [
+        {
+          "id": "shelter",
+          "label": "Quedarme a salvo",
+          "detail": "Descansas protegido. El polvo seguirá en el panel mañana.",
+          "requires_module": "habitat",
+          "effects": {
+            "oxygen": -2,
+            "energy": -4,
+            "food": 2,
+            "flags": {
+              "sheltered_dust": true
+            }
+          },
+          "label_en": "Stay sheltered",
+          "detail_en": "Rest safely. Dust will still cover the panel tomorrow."
+        },
+        {
+          "id": "outside",
+          "label": "Limpiar el panel",
+          "detail": "Usas oxígeno para limpiar el panel y recuperar su energía.",
+          "effects": {
+            "oxygen": -10,
+            "energy": 6,
+            "food": -4,
+            "flags": {
+              "cleaned_panels": true
+            }
+          },
+          "label_en": "Clean the panel",
+          "detail_en": "Use oxygen to clean the panel and restore its power."
+        }
+      ],
+      "title_en": "After the Dust Storm",
+      "text_en": "Today’s storm left dust on the solar panel. Choose how to recover."
+    },
+    {
+      "id": "solar_storm",
+      "title": "Tormenta solar",
+      "text": "El Sol lanza una ráfaga: el hábitat te cubre y afuera el traje queda solo.",
+      "sol_minimo": 2,
+      "weight": 0,
+      "options": [
+        {
+          "id": "inside",
+          "label": "Quedarme adentro",
+          "detail": "Te quedas a cubierto y hoy no exploras.",
+          "requires_module": "habitat",
+          "effects": {
+            "oxygen": 4,
+            "energy": -6,
+            "food": -2,
+            "flags": {
+              "sheltered_solar": true
+            }
+          },
+          "label_en": "Stay inside",
+          "detail_en": "You stay covered and don't go out today."
+        },
+        {
+          "id": "explore",
+          "label": "Seguir explorando",
+          "detail": "Encuentras suministros y gastas mucho oxígeno.",
+          "effects": {
+            "oxygen": -12,
+            "energy": -4,
+            "food": 8,
+            "flags": {
+              "exposed_solar": true
+            }
+          },
+          "label_en": "Keep exploring",
+          "detail_en": "You find supplies and use a lot of oxygen."
+        }
+      ],
+      "title_en": "Solar storm",
+      "text_en": "The Sun sends a burst: the habitat covers you, and outside the suit is on its own."
+    },
+    {
+      "id": "earth_message",
+      "title": "Mensaje de la Tierra",
+      "text": "Llega un mensaje de Quito. La luz tarda de 3 a 22 minutos, así que hay que esperar.",
+      "sol_minimo": 4,
+      "weight": 2,
+      "options": [
+        {
+          "id": "reply",
+          "label": "Responder con la antena",
+          "detail": "Envías la respuesta y tarda lo que tarde la luz hoy.",
+          "requires_module": "antenna_dish",
+          "effects": {
+            "oxygen": -2,
+            "energy": -6,
+            "food": 4,
+            "flags": {
+              "replied_to_earth": true,
+              "message_delay_seconds": 60,
+              "message_text": "Llegó la respuesta de Quito y te mandan un abrazo.",
+              "message_text_en": "Quito's answer arrived, and they send you a hug."
+            }
+          },
+          "label_en": "Answer with the antenna",
+          "detail_en": "You send the reply and it takes as long as the light does today."
+        },
+        {
+          "id": "write",
+          "label": "Escribirla para después",
+          "detail": "Sin antena no sale, así que la dejas lista.",
+          "requires_missing_module": "antenna_dish",
+          "effects": {
+            "oxygen": -1,
+            "energy": 2,
+            "food": -3,
+            "flags": {
+              "drafted_reply": true
+            }
+          },
+          "label_en": "Write it for later",
+          "detail_en": "Without an antenna it stays here, so you leave it ready."
+        },
+        {
+          "id": "listen",
+          "label": "Solo escuchar",
+          "detail": "No respondes, aunque tardó en llegar.",
+          "effects": {
+            "oxygen": 3,
+            "energy": -4,
+            "food": -3,
+            "flags": {
+              "heard_earth": true
+            }
+          },
+          "label_en": "Just listen",
+          "detail_en": "You don't answer, even though it took time to arrive."
+        }
+      ],
+      "title_en": "Message from Earth",
+      "text_en": "A message arrives from Quito. Light takes 3 to 22 minutes, so you have to wait."
+    },
+    {
+      "id": "panel_failure",
+      "title": "Falla del panel",
+      "text": "Un panel no gira bien. Si no lo reparas, da menos energía por 2 días.",
+      "sol_minimo": 2,
+      "weight": 3,
+      "requires_module": "solar_panel",
+      "options": [
+        {
+          "id": "repair",
+          "label": "Salir a repararlo",
+          "detail": "Lo dejas bien y mañana da energía normal.",
+          "effects": {
+            "oxygen": -3,
+            "energy": 5,
+            "food": -2,
+            "flags": {
+              "repaired_panel": true
+            }
+          },
+          "label_en": "Go out and repair it",
+          "detail_en": "You fix it and tomorrow it makes normal energy."
+        },
+        {
+          "id": "leave",
+          "label": "Dejarlo para otro día",
+          "detail": "Te quedas adentro y el panel queda flojo 2 días.",
+          "effects": {
+            "oxygen": 4,
+            "energy": -10,
+            "food": -2,
+            "flags": {
+              "panel_weak_sols": 2,
+              "skipped_repair": true
+            }
+          },
+          "label_en": "Leave it for another day",
+          "detail_en": "You stay inside and the panel stays weak for 2 days."
+        }
+      ],
+      "title_en": "Panel fault",
+      "text_en": "A panel is not turning well. If you don't repair it, it makes less energy for 2 days."
+    },
+    {
+      "id": "harvest",
+      "title": "Cosecha",
+      "text": "Hay plantas listas: cosecha hoy o déjalas un día más.",
+      "sol_minimo": 5,
+      "weight": 3,
+      "requires_module": "greenhouse",
+      "options": [
+        {
+          "id": "now",
+          "label": "Cosechar ahora",
+          "detail": "Cortas lo que hay y las bombas trabajan.",
+          "effects": {
+            "oxygen": -2,
+            "energy": -4,
+            "food": 10,
+            "flags": {
+              "harvested": true
+            }
+          },
+          "label_en": "Harvest now",
+          "detail_en": "You cut what is there and the pumps work."
+        },
+        {
+          "id": "wait",
+          "label": "Dejar crecer",
+          "detail": "Hoy sacas poco y mañana la cosecha es más grande.",
+          "effects": {
+            "oxygen": -1,
+            "energy": -3,
+            "food": 4,
+            "flags": {
+              "bonus_food": 8,
+              "patient_harvest": true
+            }
+          },
+          "label_en": "Let them grow",
+          "detail_en": "Today you take a little and tomorrow the harvest is bigger."
+        }
+      ],
+      "title_en": "Harvest",
+      "text_en": "Plants are ready: harvest today or leave them one more day."
+    },
+    {
+      "id": "meteor",
+      "title": "Meteorito chico",
+      "text": "Una piedrita golpea {module} y hay que decidir.",
+      "sol_minimo": 6,
+      "weight": 2,
+      "requires_placed_module": true,
+      "options": [
+        {
+          "id": "repair",
+          "label": "Reparar el golpe",
+          "detail": "Lo tapas y cuesta oxígeno y energía.",
+          "effects": {
+            "oxygen": -3,
+            "energy": -3,
+            "food": 2,
+            "flags": {
+              "repaired_meteor": true
+            }
+          },
+          "label_en": "Repair the hit",
+          "detail_en": "You patch it, and it costs oxygen and energy."
+        },
+        {
+          "id": "isolate",
+          "label": "Aislar el módulo",
+          "detail": "Lo apagas: queda dañado y no produce.",
+          "effects": {
+            "oxygen": 5,
+            "energy": -4,
+            "food": -3,
+            "flags": {
+              "damage_module": "random",
+              "abandoned_module": true
+            }
+          },
+          "label_en": "Isolate the module",
+          "detail_en": "You turn it off: it stays damaged and produces nothing."
+        }
+      ],
+      "title_en": "Small meteor",
+      "text_en": "A little rock hits {module} and you have to decide."
+    },
+    {
+      "id": "dust_lingers",
+      "when": "day",
+      "title": "Polvo en el aire",
+      "text": "Todavía hay polvo en los paneles. Puedes sacudirlos o esperar.",
+      "sol_minimo": 2,
+      "weight": 1,
+      "once": "per_sol",
+      "if": {
+        "dust_sols_left": 1
+      },
+      "options": [],
+      "title_en": "Dust in the air",
+      "text_en": "Dust is still on the panels. You can shake them or wait."
+    }
+  ]
+}

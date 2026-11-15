@@ -1,0 +1,41 @@
+{
+  "id": "study_glaciers",
+  "category": "secondary",
+  "order": 13,
+  "title": "Estudiar los glaciares",
+  "description": "Al norte hay un lóbulo de hielo de agua tapado por escombros. No es el hielo suelto del camino al campamento.",
+  "science": "En latitudes medias de Marte hay glaciares de hielo de agua bajo escombros. Naves como el MRO los observaron. No es el casquete polar. Lugar real: Hellas, 42,43° S, 70,5° E (Mars Trek).",
+  "done": "El lóbulo tiene hielo de agua bajo el polvo. Es distinto del hielo que hay al suroeste del campamento.",
+  "unlock": "day:7",
+  "objectives": [
+    {
+      "id": "obj_1",
+      "type": "go_to",
+      "target": "glacier_lobe",
+      "label": "Llega al lóbulo de hielo",
+      "label_en": "Reach the ice lobe"
+    },
+    {
+      "id": "obj_2",
+      "type": "sample",
+      "target": "glacier_lobe",
+      "label": "Toma un testigo del hielo enterrado",
+      "seconds": 2.2,
+      "flag": "sampled_buried_ice",
+      "note": "Testigo de hielo enterrado guardado.",
+      "label_en": "Take a core of the buried ice",
+      "note_en": "Buried-ice core stored."
+    }
+  ],
+  "rewards": {
+    "energy": 0,
+    "food": 0,
+    "oxygen": 8,
+    "flag": "sampled_glacier"
+  },
+  "title_en": "Study the glaciers",
+  "description_en": "To the north there is a lobe of water ice covered by debris. It is not the loose ice on the path to camp.",
+  "science_en": "At mid-latitudes on Mars there are water-ice glaciers under debris. Spacecraft such as MRO have watched them. This is not the polar cap. Real place: Hellas, 42.43° S, 70.5° E (Mars Trek).",
+  "done_en": "The lobe has water ice under the dust. It is different from the ice southwest of camp.",
+  "min_sol": 7
+}

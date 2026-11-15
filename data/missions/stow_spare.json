@@ -1,0 +1,41 @@
+{
+  "id": "stow_spare",
+  "category": "secondary",
+  "order": 9,
+  "title": "Guardar la pieza",
+  "description": "Hay una pieza suelta en el hábitat. Entra y guárdala en su sitio.",
+  "science": "En las misiones se guardan piezas de repuesto, porque en Marte no se puede salir a comprar otra.",
+  "done": "La pieza quedó en su sitio. Si algo se rompe, ya sabes dónde está.",
+  "unlock": "read_log",
+  "requires_module": "habitat",
+  "objectives": [
+    {
+      "id": "obj_1",
+      "type": "enter",
+      "target": "habitat",
+      "label": "Entra al hábitat",
+      "label_en": "Enter the habitat"
+    },
+    {
+      "id": "obj_2",
+      "type": "repair",
+      "target": "habitat_spare",
+      "prompt": "Guardar",
+      "prompt_en": "Stow",
+      "label": "Guarda la pieza",
+      "seconds": 1.5,
+      "label_en": "Stow the part"
+    }
+  ],
+  "rewards": {
+    "energy": 8,
+    "food": 0,
+    "oxygen": 0,
+    "flag": "spare_stowed"
+  },
+  "title_en": "Stow the spare part",
+  "description_en": "There is a loose part in the habitat. Go in and put it in its place.",
+  "science_en": "Missions keep spare parts, because on Mars you cannot go out and buy another.",
+  "done_en": "The part is in its place. If something breaks, you know where it is.",
+  "min_sol": 9
+}

@@ -1,0 +1,46 @@
+{
+  "id": "contact_earth",
+  "category": "secondary",
+  "order": 6,
+  "title": "Llamar a la Tierra",
+  "description": "Manda un mensaje a casa desde la antena. Vas a ver que la respuesta no llega al instante.",
+  "science": "Un mensaje entre Marte y la Tierra tarda entre 3 y 22 minutos en un solo viaje, según qué tan lejos estén ese día.",
+  "done": "Mensaje enviado. Viaja por el espacio y la respuesta tarda. En el juego llega en unos segundos; en Marte serían minutos.",
+  "unlock": "fix_solar_panel",
+  "requires_module": "antenna_dish",
+  "objectives": [
+    {
+      "id": "obj_1",
+      "type": "go_to",
+      "target": "antenna_dish",
+      "label": "Ve a la antena",
+      "label_en": "Go to the antenna"
+    },
+    {
+      "id": "obj_2",
+      "type": "repair",
+      "target": "antenna_dish",
+      "prompt": "Enviar",
+      "prompt_en": "Send",
+      "label": "Envía el mensaje",
+      "seconds": 1.5,
+      "label_en": "Send the message"
+    }
+  ],
+  "reply": {
+    "delay_seconds": 0,
+    "text": "Llegó la respuesta de la Tierra: \"¡Te escuchamos! Desde Ecuador te mandamos un abrazo.\"",
+    "text_en": "Earth's answer arrived: \"We hear you! From Ecuador we send you a hug.\""
+  },
+  "rewards": {
+    "energy": 0,
+    "food": 0,
+    "oxygen": 0,
+    "flag": "contacted_earth"
+  },
+  "title_en": "Call Earth",
+  "description_en": "Send a message home from the antenna. You will see that the answer does not arrive at once.",
+  "science_en": "A message between Mars and Earth takes 3 to 22 minutes one way, depending on how far apart they are that day.",
+  "done_en": "Message sent. It travels through space and the answer takes time. In the game it arrives in a few seconds; on Mars it would be minutes.",
+  "min_sol": 9
+}

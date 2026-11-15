@@ -1,0 +1,128 @@
+{
+  "status": "content_blueprint_not_connected_to_gameplay",
+  "simulation_note_es": "Los objetos transportados son archivos de rover en una misión ficticia; las misiones reales sucedieron en lugares diferentes de Marte.",
+  "simulation_note_en": "Transported objects are rover archives in a fictional mission; the actual missions landed in different places on Mars.",
+  "source_notice": "NASA Science/JPL official mission pages. Content summarized for education, not live telemetry. Verify NASA data before final contest submission.",
+  "rovers": [
+    {
+      "id": "sojourner",
+      "name": "Sojourner",
+      "year": "1997",
+      "status": "ended",
+      "mass_kg": 11.5,
+      "source": "https://science.nasa.gov/mission/mars-pathfinder/",
+      "zone": "old_landing_site",
+      "lesson_es": "Sojourner fue el primer rover que recorrió Marte en 1997. Usó un espectrómetro de rayos X y partículas alfa para analizar la composición de rocas y suelo. Trabajó 83 soles, mucho más que los siete previstos.",
+      "lesson_en": "Sojourner became the first rover to explore the surface of Mars in 1997. Its alpha proton X-ray spectrometer analyzed the composition of rocks and soil. It operated for 83 sols, far longer than its planned seven.",
+      "question_es": "¿Cuántos soles exploró Sojourner Marte?",
+      "question_en": "For how many sols did Sojourner explore Mars?",
+      "answers_es": [
+        "7",
+        "83",
+        "365"
+      ],
+      "answers_en": [
+        "7",
+        "83",
+        "365"
+      ],
+      "correct": 1
+    },
+    {
+      "id": "spirit",
+      "name": "Spirit",
+      "year": "2004–2010 (last contact); mission closed 2011",
+      "status": "ended",
+      "mass_kg": 185,
+      "source": "https://science.nasa.gov/mission/mer-spirit/",
+      "zone": "sand_dunes",
+      "lesson_es": "Spirit llegó a Marte en 2004 buscando pistas del agua pasada. Encontró minerales que indicaban condiciones antiguas húmedas. Quedó atrapado en suelo blando en 2009; se recibió su última comunicación en marzo de 2010 y NASA cerró el esfuerzo de recuperación en 2011.",
+      "lesson_en": "Spirit landed in 2004 to look for evidence of ancient water. Its mineral discoveries indicated earlier wet environments. It became stuck in soft soil in 2009; its final communication came in March 2010 and NASA ended recovery attempts in 2011.",
+      "question_es": "¿Qué dificultad detuvo el desplazamiento de Spirit?",
+      "question_en": "What difficulty stopped Spirit from driving?",
+      "answers_es": [
+        "Quedó atrapado en arena/suelo blando",
+        "Una tormenta de nieve",
+        "Se hundió en un océano"
+      ],
+      "answers_en": [
+        "It became stuck in soft soil",
+        "A snowstorm",
+        "It sank in an ocean"
+      ],
+      "correct": 0
+    },
+    {
+      "id": "opportunity",
+      "name": "Opportunity",
+      "year": "2004–2018 (last signal); declared complete 2019",
+      "status": "ended",
+      "mass_kg": 185,
+      "source": "https://science.nasa.gov/mission/mer-opportunity/",
+      "zone": "ancient_lakebed",
+      "lesson_es": "Opportunity exploró rocas que registran la historia del agua en Marte. Trabajó casi quince años, superando enormemente su vida útil prevista. En 2018 una tormenta global de polvo redujo la luz solar; su última señal se recibió en junio de ese año.",
+      "lesson_en": "Opportunity explored rocks that record the history of water on Mars. It worked for almost fifteen years, greatly exceeding its planned life. A planet-wide dust storm cut sunlight in 2018; its last signal was received that June.",
+      "question_es": "¿Por qué la tormenta de 2018 fue peligrosa para Opportunity?",
+      "question_en": "Why was the 2018 storm dangerous for Opportunity?",
+      "answers_es": [
+        "Aumentó el oxígeno",
+        "Bloqueó la luz para sus paneles solares",
+        "Congeló un mar de agua"
+      ],
+      "answers_en": [
+        "It increased oxygen",
+        "It blocked sunlight needed by its solar panels",
+        "It froze an ocean"
+      ],
+      "correct": 1
+    },
+    {
+      "id": "curiosity",
+      "name": "Curiosity",
+      "year": "2012–present",
+      "status": "active",
+      "mass_kg": 899,
+      "source": "https://science.nasa.gov/mission/msl-curiosity/",
+      "zone": "cave_approach",
+      "lesson_es": "Curiosity aterrizó en 2012 y estudia si Marte tuvo condiciones capaces de sostener vida microbiana. Detectó moléculas orgánicas en rocas antiguas, que por sí solas NO prueban que haya existido vida. Sigue explorando Marte.",
+      "lesson_en": "Curiosity landed in 2012 and studies whether Mars once had environments suitable for microbial life. It detected organic molecules in ancient rocks; these molecules alone do NOT prove life existed. It continues exploring Mars.",
+      "question_es": "¿Encontrar moléculas orgánicas demuestra por sí solo vida antigua?",
+      "question_en": "Do organic molecules alone prove ancient life existed?",
+      "answers_es": [
+        "Sí, siempre",
+        "No, son pistas que requieren más evidencias",
+        "Solo si están en hielo"
+      ],
+      "answers_en": [
+        "Yes, always",
+        "No, they are clues needing more evidence",
+        "Only if found in ice"
+      ],
+      "correct": 1
+    },
+    {
+      "id": "perseverance",
+      "name": "Perseverance",
+      "year": "2021–present",
+      "status": "active",
+      "mass_kg": 1025,
+      "source": "https://science.nasa.gov/mission/mars-2020-perseverance/",
+      "zone": "glacier_edge",
+      "lesson_es": "Perseverance llegó a Marte en 2021 para estudiar la posible vida microbiana antigua y recolectar muestras de roca. A bordo viajó MOXIE, una demostración tecnológica que obtuvo oxígeno de la atmósfera marciana rica en dióxido de carbono; MOXIE completó sus experimentos en 2023.",
+      "lesson_en": "Perseverance landed in 2021 to look for signs of ancient microbial life and collect rock samples. It carried MOXIE, a technology demonstration that made oxygen from the carbon-dioxide-rich Martian atmosphere; MOXIE completed its experiments in 2023.",
+      "question_es": "¿De qué gas obtenía oxígeno el experimento MOXIE?",
+      "question_en": "Which gas did MOXIE use to produce oxygen?",
+      "answers_es": [
+        "Dióxido de carbono",
+        "Nitrógeno",
+        "Helio"
+      ],
+      "answers_en": [
+        "Carbon dioxide",
+        "Nitrogen",
+        "Helium"
+      ],
+      "correct": 0
+    }
+  ]
+}

@@ -1,0 +1,164 @@
+{
+  "_note": "Textos del cierre. Nada trágico: si un recurso llega a 0, el rescate pone a salvo a la tripulación.",
+  "endings": {
+    "ejemplar": {
+      "title": "Misión ejemplar",
+      "text": "La base quedó en buen estado. Cuidaste el oxígeno, la energía y la comida. También cumpliste las cinco misiones principales.",
+      "que_aprendiste": [
+        "En Marte nada es gratis: cada módulo encendido gasta energía que los paneles tienen que pagar.",
+        "El polvo de Marte se pega a los paneles solares y les quita luz. Por eso hay que limpiarlos.",
+        "Un mensaje entre Marte y la Tierra tarda entre 3 y 22 minutos. Nadie habla en vivo."
+      ],
+      "inti": "Lo hiciste muy bien. Las decisiones fueron tuyas; yo solo miraba los números.",
+      "title_en": "Exemplary mission",
+      "text_en": "The base is in good shape. You looked after the oxygen, the energy, and the food. You also finished the five main missions.",
+      "inti_en": "You did very well. The decisions were yours; I only watched the numbers.",
+      "que_aprendiste_en": [
+        "On Mars nothing is free: every module you turn on uses energy the panels have to pay for.",
+        "Mars dust sticks to the solar panels and takes away their light. That is why you have to clean them.",
+        "A message between Mars and Earth takes 3 to 22 minutes. Nobody talks live."
+      ]
+    },
+    "justo": {
+      "title": "Volvimos justo",
+      "text": "Llegaste al final de la misión. Alguna reserva quedó corta, o faltó alguna misión principal, pero estás bien y la base sigue en pie.",
+      "que_aprendiste": [
+        "Guardar un poco de oxígeno, energía y comida hace el día siguiente más tranquilo.",
+        "En Marte hay hielo de agua bajo el suelo y en los polos. De esa agua se puede sacar oxígeno.",
+        "Volver a tiempo también cuenta. La próxima salida puede ser más tranquila."
+      ],
+      "inti": "Volvimos justo. Revisemos juntos qué estuvo cerca del límite.",
+      "title_en": "We made it, just",
+      "text_en": "You reached the end of the mission. Some reserve ran short, or a main mission was left undone, but you are all right and the base is still standing.",
+      "inti_en": "We made it, just. Let's look together at what was close to the limit.",
+      "que_aprendiste_en": [
+        "Keeping a little oxygen, energy, and food makes the next day calmer.",
+        "On Mars there is water ice under the ground and at the poles. Oxygen can be taken from that water.",
+        "Getting back in time counts too. The next trip out can be calmer."
+      ]
+    },
+    "rescate": {
+      "title": "Rescate",
+      "text": "El protocolo de rescate se activó. La nave de apoyo te recoge. Aprendimos mucho.",
+      "que_aprendiste": [
+        "Si el oxígeno, la energía o la comida llegan a cero, la misión se detiene para cuidarte.",
+        "Pedir rescate a tiempo es una decisión inteligente. Estás a salvo.",
+        "Afuera el traje gasta oxígeno. La base, con sus paneles y su hábitat, es el refugio."
+      ],
+      "inti": "Protocolo de rescate activo. Estás a salvo.",
+      "title_en": "Rescue",
+      "text_en": "The rescue protocol started. The support ship picks you up. We learned a lot.",
+      "inti_en": "Rescue protocol active. You are safe.",
+      "que_aprendiste_en": [
+        "If the oxygen, the energy, or the food hits zero, the mission stops to look after you.",
+        "Asking for a rescue in time is a smart decision. You are safe.",
+        "Outside, the suit uses oxygen. The base, with its panels and its habitat, is the shelter."
+      ]
+    },
+    "radiation": {
+      "title": "Exposición solar fatal",
+      "title_en": "Fatal solar storm exposure",
+      "text": "La radiación de la tormenta solar superó la protección del traje durante una salida. La misión terminó. En la próxima, vuelve al hábitat al escuchar la alerta.",
+      "text_en": "Solar storm radiation overwhelmed the suit during an EVA. The mission ended. Next time, return to the pressurized habitat as soon as the warning sounds.",
+      "inti": "La alerta te dio tiempo para refugiarte. La próxima vez, regresa de inmediato.",
+      "inti_en": "The warning gave you time to shelter. Next time, return immediately.",
+      "que_aprendiste": [
+        "Las partículas solares intensas son peligrosas fuera de un refugio blindado.",
+        "El aviso da tiempo para volver a la nave antes de que lleguen.",
+        "Los umbrales de peligro y los tiempos de la misión son mecánicas del juego, no límites clínicos de NASA."
+      ],
+      "que_aprendiste_en": [
+        "Energetic solar particles are dangerous outside a shielded shelter.",
+        "The early warning gives you time to return before they arrive.",
+        "Danger thresholds and timing are game mechanics, not NASA clinical dose limits."
+      ]
+    }
+  },
+  "rescue_lines": {
+    "oxygen": "Se acabó el oxígeno. Activo el protocolo de rescate. Ya viene ayuda y estás a salvo.",
+    "energy": "Se acabó la energía de la base. Activo el protocolo de rescate. Estás a salvo.",
+    "food": "Se acabó la comida. Activo el protocolo de rescate. Nadie se queda sin apoyo: viene una nave."
+  },
+  "lessons": [
+    {
+      "always": true,
+      "text": "Cada elección sube una reserva y baja otra. No hay una opción gratis.",
+      "text_en": "Each choice raises one reserve and lowers another. There is no free option."
+    },
+    {
+      "flag": "saw_dust_storm",
+      "text": "El polvo de Marte tapa los paneles. Durante la tormenta hay que elegir qué módulo encender.",
+      "text_en": "Mars dust covers the panels. During the storm you have to choose which module to turn on."
+    },
+    {
+      "flag": "saw_solar_storm",
+      "text": "En una tormenta solar, el hábitat es el refugio. Explorar afuera gasta mucho oxígeno.",
+      "text_en": "In a solar storm, the habitat is the shelter. Exploring outside uses a lot of oxygen."
+    },
+    {
+      "flag": "saw_earth_message",
+      "text": "Un mensaje entre Marte y la Tierra tarda entre 3 y 22 minutos, porque viaja a la velocidad de la luz. No se puede hablar en vivo.",
+      "text_en": "A message between Mars and Earth takes 3 to 22 minutes, because it travels at the speed of light. You cannot talk live."
+    },
+    {
+      "flag": "built_shelter",
+      "text": "Armaste el refugio: gastaste comida y energía, pero tu dosis bajó a una cuarta parte.",
+      "text_en": "You built the shelter: you spent food and energy, but your dose dropped to a quarter."
+    },
+    {
+      "flag": "storm_outside",
+      "text": "Estuviste afuera durante la tormenta. La dosis de las partículas fue completa.",
+      "text_en": "You were outside during the storm. The particle dose was the full one."
+    },
+    {
+      "flag": "exercised_any",
+      "text": "El ejercicio costó energía y comida. En la Estación, los astronautas entrenan unas 2 horas al día.",
+      "text_en": "Exercise cost energy and food. On the Station, astronauts train about 2 hours a day."
+    },
+    {
+      "flag": "saw_blackout",
+      "text": "El Sol quedó entre la Tierra y Marte. Esos Días no hubo mensaje: la tripulación decidió sola.",
+      "text_en": "The Sun sat between Earth and Mars. On those Days no message got through: the crew decided alone."
+    },
+    {
+      "flag": "saw_panel_failure",
+      "text": "Reparar un panel significa salir a caminar, y el traje gasta oxígeno.",
+      "text_en": "Repairing a panel means going out for a walk, and the suit uses oxygen."
+    },
+    {
+      "flag": "saw_harvest",
+      "text": "El invernadero da comida, y también gasta energía. Cosechar hoy o esperar cambia cuánto comes mañana.",
+      "text_en": "The greenhouse gives food, and it also uses energy. Harvesting today or waiting changes how much you eat tomorrow."
+    },
+    {
+      "flag": "saw_meteor",
+      "text": "Un golpe chico puede apagar un módulo. Repararlo cuesta; dejarlo dañado también.",
+      "text_en": "A small hit can turn a module off. Repairing it costs something; leaving it damaged does too."
+    },
+    {
+      "flag": "has_rover_logs",
+      "text": "Spirit (2004-2010) se quedó atascado. Opportunity (2004-2018) recorrió Meridiani y se silenció en una tormenta de polvo. Bajar sus datos no es llevárselos. Curiosity y Perseverance no se rescatan aquí.",
+      "text_en": "Spirit (2004-2010) got stuck. Opportunity (2004-2018) crossed Meridiani and went quiet in a dust storm. Downloading their data is not taking them away. Curiosity and Perseverance are not rescued here."
+    },
+    {
+      "flag": "sampled_glacier",
+      "text": "En latitudes medias de Marte hay glaciares de hielo de agua bajo escombros. No son el casquete polar. Naves como el MRO los han observado.",
+      "text_en": "At mid-latitudes on Mars there are water-ice glaciers under debris. They are not the polar cap. Spacecraft such as MRO have watched them."
+    },
+    {
+      "flag": "checked_biosignature",
+      "text": "No hay prueba de vida. Lo que se halló puede ser una biosignatura o un falso positivo, y hay que contrastarlo en la Tierra.",
+      "text_en": "There is no proof of life. What was found may be a biosignature or a false positive, and it has to be checked on Earth."
+    },
+    {
+      "flag": "lethal_solar_exposure",
+      "text": "El riesgo aumenta al permanecer afuera durante la fase de partículas. Protegerse en el hábitat lo detiene.",
+      "text_en": "Risk rises when you stay outside during the particle storm. Sheltering inside the habitat stops it."
+    }
+  ],
+  "rescue_lines_en": {
+    "oxygen": "The oxygen ran out. I am starting the rescue protocol. Help is coming and you are safe.",
+    "energy": "The base ran out of energy. I am starting the rescue protocol. You are safe.",
+    "food": "The food ran out. I am starting the rescue protocol. Nobody is left without support: a ship is coming."
+  }
+}

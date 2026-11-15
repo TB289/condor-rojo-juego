@@ -1,0 +1,42 @@
+{
+  "id": "tend_plants",
+  "category": "secondary",
+  "order": 8,
+  "title": "Regar desde adentro",
+  "description": "Entra al invernadero y riega las plantas sin salir al polvo.",
+  "science": "En Marte llega menos luz del Sol que en la Tierra, así que las plantas viven en un invernadero protegido.",
+  "done": "Las plantas quedaron regadas. El invernadero las cuida del frío de afuera.",
+  "unlock": "grow_potato",
+  "requires_module": "greenhouse",
+  "objectives": [
+    {
+      "id": "obj_1",
+      "type": "enter",
+      "target": "greenhouse",
+      "label": "Entra al invernadero",
+      "label_en": "Enter the greenhouse"
+    },
+    {
+      "id": "obj_2",
+      "type": "repair",
+      "target": "greenhouse_bed",
+      "tool": "water",
+      "prompt": "Regar",
+      "prompt_en": "Water",
+      "label": "Riega las plantas",
+      "seconds": 1.5,
+      "label_en": "Water the plants"
+    }
+  ],
+  "rewards": {
+    "energy": 0,
+    "food": 8,
+    "oxygen": 0,
+    "flag": "plants_watered"
+  },
+  "title_en": "Water from inside",
+  "description_en": "Enter the greenhouse and water the plants without going out into the dust.",
+  "science_en": "Mars gets less sunlight than Earth, so the plants live in a protected greenhouse.",
+  "done_en": "The plants are watered. The greenhouse keeps them from the cold outside.",
+  "min_sol": 8
+}

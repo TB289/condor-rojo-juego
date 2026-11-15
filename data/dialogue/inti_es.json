@@ -1,0 +1,285 @@
+{
+  "triggers": {
+    "game_start": [
+      {
+        "text": "Hola. Soy INTI, la voz de la base. En Marte se camina más liviano.",
+        "tip": "gravity"
+      },
+      {
+        "text": "Ya puedes moverte. Si quieres una pista, aprieta Tab.",
+        "tip": ""
+      },
+      {
+        "text": "Esta es tu base. Yo miro el oxígeno, la energía y la comida.",
+        "tip": ""
+      }
+    ],
+    "first_outside": [
+      {
+        "text": "Saliste de la zona de la base. Afuera el traje gasta oxígeno más rápido.",
+        "tip": "thin_air"
+      },
+      {
+        "text": "Afuera el suelo es de Marte. Hace mucho frío, y el hábitat es el lugar cubierto.",
+        "tip": "cold"
+      },
+      {
+        "text": "La base quedó atrás. Puedes seguir o volver. El agua de Marte está congelada.",
+        "tip": "water_ice"
+      }
+    ],
+    "oxygen_low": [
+      {
+        "text": "El oxígeno bajó de un cuarto. Afuera el traje lo gasta más rápido.",
+        "tip": "thin_air"
+      },
+      {
+        "text": "Queda poco aire en la reserva. Cada minuto fuera de la base pesa más.",
+        "tip": ""
+      },
+      {
+        "text": "Mira la barra cian. Si llega a cero, la misión para y pide rescate.",
+        "tip": ""
+      }
+    ],
+    "energy_low": [
+      {
+        "text": "La energía está baja. Los paneles cargan la batería cuando les llega el sol.",
+        "tip": "dust_power"
+      },
+      {
+        "text": "Queda poca batería. El polvo sobre los paneles hace que carguen menos.",
+        "tip": ""
+      },
+      {
+        "text": "La barra amarilla está floja. De noche, cada módulo encendido usa parte de esa energía.",
+        "tip": ""
+      }
+    ],
+    "food_low": [
+      {
+        "text": "Queda poca comida. El invernadero puede sumar si tiene energía.",
+        "tip": "plants"
+      },
+      {
+        "text": "La barra verde está baja. En la cena, una ración más grande llena más y gasta más.",
+        "tip": ""
+      },
+      {
+        "text": "La comida está justa. Una cosecha mueve esa barra.",
+        "tip": ""
+      }
+    ],
+    "new_day": [
+      {
+        "text": "Empieza el día {day}. En Marte el día dura un poquito más que en la Tierra.",
+        "tip": "sol_length"
+      },
+      {
+        "text": "Buen día. Arriba siguen las tres barras: oxígeno, energía y blindaje radiológico.",
+        "tip": ""
+      },
+      {
+        "text": "Otro día en la base. Lo de anoche quedó anotado en el diario.",
+        "tip": ""
+      }
+    ],
+    "before_decision": [
+      {
+        "text": "Hay una decisión. Yo te cuento el costo; la elección es tuya.",
+        "tip": ""
+      },
+      {
+        "text": "Lee las opciones con calma. Cada una mueve un poco las barras.",
+        "tip": ""
+      },
+      {
+        "text": "No hay una sola respuesta. Piensa qué le hace más falta a la base hoy.",
+        "tip": ""
+      }
+    ],
+    "event_dust_storm": [
+      {
+        "text": "Llegó polvo. Se pega a los paneles y les quita energía.",
+        "tip": "dust_power"
+      },
+      {
+        "text": "El cielo se llenó de polvo. Mientras esté, los paneles ven menos sol.",
+        "tip": ""
+      },
+      {
+        "text": "El polvo puede durar más de un día. En ese tiempo los paneles dan menos.",
+        "tip": ""
+      }
+    ],
+    "event_solar_storm": [
+      {
+        "text": "Hay una tormenta solar. El hábitat cubre mejor que el traje solo.",
+        "tip": ""
+      },
+      {
+        "text": "El Sol lanzó una ráfaga. Adentro del hábitat hay más protección.",
+        "tip": ""
+      },
+      {
+        "text": "Esta tormenta no se ve como lluvia. El refugio es el hábitat.",
+        "tip": ""
+      }
+    ],
+    "event_earth_message": [
+      {
+        "text": "Llegó un mensaje de la Tierra. La señal tarda: no es al instante.",
+        "tip": "comms_delay"
+      },
+      {
+        "text": "Escriben desde casa. El mensaje viajó varios minutos para llegar.",
+        "tip": "comms_delay"
+      },
+      {
+        "text": "Hay noticias de la Tierra. La antena sirve para responder. Sin ella, se puede dejar escrito.",
+        "tip": ""
+      }
+    ],
+    "event_panel_fail": [
+      {
+        "text": "Un panel no gira bien. Si sigue así, dará menos energía por un par de días.",
+        "tip": ""
+      },
+      {
+        "text": "Hay una falla en un panel. Salir a verlo gasta oxígeno. Dejarlo lo deja flojo.",
+        "tip": ""
+      },
+      {
+        "text": "El panel pide atención. Un camino gasta aire; el otro deja menos energía.",
+        "tip": ""
+      }
+    ],
+    "event_harvest": [
+      {
+        "text": "Hay plantas listas en el invernadero.",
+        "tip": "plants"
+      },
+      {
+        "text": "Toca mirar la cosecha. Cortar hoy da comida ahora. Dejar crecer cambia la de mañana.",
+        "tip": ""
+      },
+      {
+        "text": "Las papas del invernadero siguen una idea real: suelo parecido al de Marte, con abono.",
+        "tip": "plants"
+      }
+    ],
+    "event_meteorite": [
+      {
+        "text": "Una piedrita del cielo golpeó un módulo. No es enorme.",
+        "tip": ""
+      },
+      {
+        "text": "Un meteorito chico tocó la base. Reparar gasta recursos. Aislar el módulo lo deja quieto.",
+        "tip": ""
+      },
+      {
+        "text": "El golpe se puede tapar o el módulo se puede aislar. Cada camino cambia la base distinto.",
+        "tip": ""
+      }
+    ],
+    "rescue": [
+      {
+        "text": "Un recurso llegó a cero. Paramos y pedimos rescate. Estás a salvo.",
+        "tip": ""
+      },
+      {
+        "text": "Una barra se vació. Viene ayuda. Lo importante es que estás bien.",
+        "tip": ""
+      },
+      {
+        "text": "Activamos el protocolo de rescate. La misión se detiene y tú estás a salvo.",
+        "tip": ""
+      }
+    ],
+    "mission_complete": [
+      {
+        "text": "Llegaste al final de los días. La misión terminó.",
+        "tip": ""
+      },
+      {
+        "text": "Completaste la misión. En el resumen vas a ver tus decisiones.",
+        "tip": ""
+      },
+      {
+        "text": "Se acabaron los días de la misión. Ahora puedes ver cómo te fue.",
+        "tip": ""
+      }
+    ]
+  },
+  "hints": [
+    {
+      "when": { "resource": "oxygen", "below": 25 },
+      "text": "El oxígeno está por debajo de 25. Afuera baja más rápido. El hábitat lo cuida mejor.",
+      "tip": "thin_air"
+    },
+    {
+      "when": { "resource": "energy", "below": 25 },
+      "text": "La energía está por debajo de 25. Si hay polvo en los paneles, cargan menos.",
+      "tip": "dust_power"
+    },
+    {
+      "when": { "resource": "food", "below": 25 },
+      "text": "La comida está por debajo de 25. El invernadero y la cena de la noche mueven esa barra.",
+      "tip": "plants"
+    },
+    {
+      "when": { "event": "dust_storm" },
+      "text": "Hay polvo en el aire. Los paneles dan menos energía mientras el polvo los tapa.",
+      "tip": "dust_power"
+    },
+    {
+      "when": { "event": "solar_storm" },
+      "text": "Hay tormenta solar. El hábitat protege más que estar al aire libre.",
+      "tip": ""
+    },
+    {
+      "when": { "outside": true },
+      "text": "Estás fuera de la zona de la base. El traje gasta oxígeno más rápido aquí.",
+      "tip": "water_ice"
+    },
+    {
+      "when": { "default": true },
+		"text": "Puedes caminar, mirar un módulo con E y dormir en la cama para terminar el Día. Tab pide una pista.",
+      "tip": "glossary"
+    }
+  ],
+  "tips": {
+    "thin_air": {
+      "text": "El aire de Marte es muy delgado y casi no tiene oxígeno. Por eso vivimos en un hábitat y salimos con traje.",
+      "credit": "NASA"
+    },
+    "sol_length": {
+      "text": "Un día en Marte dura unas 24 horas y 39 minutos, un poquito más que en la Tierra. Aquí lo llamamos Día.",
+      "credit": "NASA"
+    },
+    "gravity": {
+      "text": "En Marte la gravedad es más baja que en la Tierra: pesarías menos de la mitad. Caminar se siente distinto.",
+      "credit": "NASA"
+    },
+    "dust_power": {
+      "text": "El polvo de Marte se pega a los paneles solares y les quita energía. A veces el viento los limpia un poco.",
+      "credit": "NASA (misiones con paneles, como InSight)"
+    },
+    "water_ice": {
+      "text": "En Marte hay hielo de agua, sobre todo en los polos y debajo del suelo en otras zonas. No es un río: está congelado.",
+      "credit": "NASA"
+    },
+    "comms_delay": {
+      "text": "Un mensaje entre Marte y la Tierra tarda entre 3 y 22 minutos en un solo viaje, según qué tan lejos estén ese día. No es instantáneo.",
+      "credit": "NASA"
+    },
+    "cold": {
+      "text": "En Marte suele hacer mucho frío, a menudo más de 60 grados bajo cero. El hábitat nos cubre de eso y del viento.",
+      "credit": "NASA"
+    },
+    "plants": {
+      "text": "En la Tierra, científicos ya probaron cultivar plantas en tierra parecida a la de Marte, con abono. En el juego, la papa del invernadero sigue esa idea.",
+      "credit": "NASA / investigación en simulantes de regolito"
+    }
+  }
+}

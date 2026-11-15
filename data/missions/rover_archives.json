@@ -1,0 +1,86 @@
+{
+  "id": "rover_archives",
+  "category": "secondary",
+  "order": 18,
+  "title": "Archivos de los rovers",
+  "title_en": "Rover archives",
+  "description": "Cinco archivos de rovers: dos en la base principal, dos en Jezero y uno en la cueva. Copia datos y responde preguntas.",
+  "description_en": "Five rover archives: two in the main zone, two in Jezero, and one inside the cave. Copy data and answer questions.",
+  "science": "Estos archivos resumen misiones reales de la NASA. En el juego están cerca, en una zona ficticia; en Marte aterrizaron en sitios muy distintos. Curiosity y Perseverance siguen activos: aquí solo hay una copia de sus datos.",
+  "science_en": "These archives summarize real NASA missions. In the game they sit close together in a fictional zone; on Mars they landed far apart. Curiosity and Perseverance are still active: here you only find a copy of their data.",
+  "done": "Copiaste los cinco archivos y respondiste las preguntas. Los rovers reales no se mueven de sitio; tú solo rescataste su conocimiento.",
+  "done_en": "You copied all five archives and answered the questions. The real rovers stay where they are; you only recovered their knowledge.",
+  "unlock": [
+    "day:8",
+    "fix_solar_panel"
+  ],
+  "objectives": [
+    {
+      "id": "obj_sojourner",
+      "type": "recover",
+      "target": "rover_sojourner",
+      "quiz": "sojourner",
+      "seconds": 2.0,
+      "label": "Copia el archivo de Sojourner (dentro de la cueva) y responde",
+      "label_en": "Copy Sojourner’s archive (inside the cave) and answer",
+      "flag": "archive_sojourner",
+      "note": "Archivo de Sojourner copiado.",
+      "note_en": "Sojourner's archive copied."
+    },
+    {
+      "id": "obj_spirit",
+      "type": "recover",
+      "target": "rover_spirit",
+      "quiz": "spirit",
+      "seconds": 2.0,
+      "label": "Copia el archivo de Spirit y responde",
+      "label_en": "Copy Spirit's archive and answer",
+      "flag": "archive_spirit",
+      "note": "Archivo de Spirit copiado.",
+      "note_en": "Spirit's archive copied."
+    },
+    {
+      "id": "obj_opportunity",
+      "type": "recover",
+      "target": "rover_opportunity",
+      "quiz": "opportunity",
+      "seconds": 2.0,
+      "label": "Copia el archivo de Opportunity y responde",
+      "label_en": "Copy Opportunity's archive and answer",
+      "flag": "archive_opportunity",
+      "note": "Archivo de Opportunity copiado.",
+      "note_en": "Opportunity's archive copied."
+    },
+    {
+      "id": "obj_curiosity",
+      "type": "recover",
+      "target": "rover_curiosity",
+      "quiz": "curiosity",
+      "seconds": 2.0,
+      "label": "Copia el archivo de Curiosity (Jezero) y responde",
+      "label_en": "Copy Curiosity’s archive (Jezero) and answer",
+      "flag": "archive_curiosity",
+      "note": "Archivo de Curiosity copiado.",
+      "note_en": "Curiosity's archive copied."
+    },
+    {
+      "id": "obj_perseverance",
+      "type": "recover",
+      "target": "rover_perseverance",
+      "quiz": "perseverance",
+      "seconds": 2.0,
+      "label": "Copia el archivo de Perseverance (Jezero) y responde",
+      "label_en": "Copy Perseverance’s archive (Jezero) and answer",
+      "flag": "archive_perseverance",
+      "note": "Archivo de Perseverance copiado.",
+      "note_en": "Perseverance's archive copied."
+    }
+  ],
+  "rewards": {
+    "energy": 8,
+    "food": 0,
+    "oxygen": 6,
+    "flag": "has_rover_archives"
+  },
+  "min_sol": 8
+}

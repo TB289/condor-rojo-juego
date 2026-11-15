@@ -1,0 +1,51 @@
+{
+  "id": "drive_support_rover",
+  "category": "main",
+  "order": 7,
+  "min_sol": 2,
+  "unlock": "repair_support_rover",
+  "title": "Prueba de conducción Cóndor",
+  "title_en": "Cóndor rover test drive",
+  "description": "Sube al rover, condúcelo por Isidis Planitia y baja con E. Usa WASD o la palanca táctil para conducir.",
+  "description_en": "Board the rover, drive through Isidis Planitia and exit with E. Use WASD or the touch joystick to steer.",
+  "science": "Conducir un rover sobre terreno irregular requiere controlar la velocidad y evitar rocas y cráteres.",
+  "science_en": "Driving a rover across uneven terrain requires careful speed control and avoiding rocks and craters.",
+  "done": "La prueba de manejo salió bien. El rover Cóndor queda disponible para el resto de la misión.",
+  "done_en": "Test drive complete. The Cóndor rover remains available for the rest of the mission.",
+  "objectives": [
+    {
+      "id": "obj_1",
+      "type": "go_to",
+      "target": "rover_support",
+      "label": "Regresa al rover Cóndor",
+      "label_en": "Return to the Cóndor rover"
+    },
+    {
+      "id": "obj_2",
+      "type": "board_rover",
+      "target": "rover_support",
+      "label": "Sube al rover (E)",
+      "label_en": "Board the rover (E / Interact)"
+    },
+    {
+      "id": "obj_3",
+      "type": "drive_distance",
+      "target": "rover_support",
+      "label": "Conduce una distancia de prueba",
+      "label_en": "Take a short test drive"
+    },
+    {
+      "id": "obj_4",
+      "type": "exit_rover",
+      "target": "rover_support",
+      "label": "Baja del rover con E",
+      "label_en": "Exit the rover with E / Interact"
+    }
+  ],
+  "rewards": {
+    "energy": 8,
+    "oxygen": 0,
+    "food": 0,
+    "flag": "support_rover_tested"
+  }
+}

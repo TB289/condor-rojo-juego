@@ -1,0 +1,48 @@
+[gd_scene load_steps=11 format=3]
+
+[ext_resource type="Script" path="res://scenes/Main.gd" id="1_script"]
+[ext_resource type="PackedScene" path="res://scenes/mars/MarsMap.tscn" id="2_mars"]
+[ext_resource type="PackedScene" path="res://scenes/ui/HUD.tscn" id="3_hud"]
+[ext_resource type="PackedScene" path="res://scenes/ui/ModuleInfoPanel.tscn" id="4_module_info"]
+[ext_resource type="PackedScene" path="res://scenes/ui/IntiPanel.tscn" id="5_inti"]
+[ext_resource type="PackedScene" path="res://scenes/ui/PauseMenu.tscn" id="6_pause"]
+[ext_resource type="Script" path="res://scenes/base/InteriorTravel.gd" id="7_travel"]
+[ext_resource type="Script" path="res://scenes/mars/WorldFrame.gd" id="8_world"]
+[ext_resource type="Script" path="res://scenes/ui/DayOneGuide.gd" id="9_guide"]
+[ext_resource type="Script" path="res://scenes/ui/RoverInfoPanel.gd" id="10_rover_info"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_script")
+
+[node name="WorldFrame" type="SubViewportContainer" parent="."]
+texture_filter = 1
+offset_right = 640.0
+offset_bottom = 360.0
+stretch = false
+script = ExtResource("8_world")
+
+[node name="World" type="SubViewport" parent="WorldFrame"]
+handle_input_locally = true
+size = Vector2i(640, 360)
+
+[node name="MarsMap" parent="WorldFrame/World" instance=ExtResource("2_mars")]
+
+[node name="HUD" parent="." instance=ExtResource("3_hud")]
+
+[node name="ModuleInfoPanel" parent="." instance=ExtResource("4_module_info")]
+
+[node name="RoverInfoPanel" type="CanvasLayer" parent="."]
+layer = 38
+script = ExtResource("10_rover_info")
+
+[node name="IntiPanel" parent="." instance=ExtResource("5_inti")]
+
+[node name="PauseMenu" parent="." instance=ExtResource("6_pause")]
+
+[node name="DayOneGuide" type="CanvasLayer" parent="."]
+layer = 37
+process_mode = 3
+script = ExtResource("9_guide")
+
+[node name="InteriorTravel" type="Node" parent="."]
+script = ExtResource("7_travel")

@@ -1,0 +1,25 @@
+CÓNDOR ROJO v2.5.40 - SUPPORT ROVER REPAIR & DRIVING
+
+Sol 4 - Repair the Cóndor Support Rover near the base:
+  - New story mission Repair the Cóndor rover.
+  - Approach the stationary support rover and hold E (or touch Interact)
+    for 3.5 seconds to repair its drive system.
+  - The rover's status lamp changes from orange to green.
+  - The rover cannot be driven earlier than Sol 5.
+
+Sol 5 - Rover test drive:
+  - New story mission: board, drive, dismount.
+  - After repairing the rover, press E / touch Interact beside it to board.
+  - WASD, arrow keys, gamepad or on-screen joystick steer the rover.
+  - Press E / touch Interact again to dismount at a clear adjacent spot.
+  - Camera follows the moving rover; collision checks and terrain obstacles
+    remain enabled. A small seated astronaut sprite is shown on the rover.
+  - Driving remains unlocked after the Sol 5 training mission.
+  - The existing rover information card is available with Sprint + Interact.
+
+Preserved: other NASA rover cards, survival system, Sol 1 sandstorm,
+Sol 3 radiation storm, touch button sprites, INTI, ship, Jezero, cave, HUD,
+accessibility, fit-to-scale and the 10-sol campaign.
+
+Validation: JSON, resource-reference and ZIP checks only. A Godot 4.7.2
+runtime was not available here; in-editor gameplay verification is needed.

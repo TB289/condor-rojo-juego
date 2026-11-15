@@ -1,0 +1,589 @@
+[gd_scene load_steps=16 format=3]
+
+[ext_resource type="Script" path="res://scenes/intro/Intro.gd" id="1_script"]
+[ext_resource type="Script" path="res://scenes/intro/Backdrop.gd" id="2_backdrop"]
+[ext_resource type="Texture2D" path="res://assets/art/base/intro_rocket.png" id="3_lander"]
+[ext_resource type="Texture2D" path="res://assets/art/base/flag_ecuador.png" id="4_flag"]
+[ext_resource type="SpriteFrames" path="res://scenes/player/astronaut_frames.tres" id="5_frames"]
+[ext_resource type="PackedScene" path="res://scenes/ui/IntiBox.tscn" id="6_box"]
+[ext_resource type="Theme" path="res://ui/theme/condor_theme.tres" id="7_theme"]
+[ext_resource type="FontFile" path="res://assets/fonts/m5x7.ttf" id="8_font"]
+
+[sub_resource type="Gradient" id="Gradient_puff"]
+offsets = PackedFloat32Array(0, 1)
+colors = PackedColorArray(0.972549, 0.878431, 0.627451, 1, 0.909804, 0.537255, 0.227451, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_puff"]
+gradient = SubResource("Gradient_puff")
+width = 8
+height = 8
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[sub_resource type="Gradient" id="Gradient_life"]
+offsets = PackedFloat32Array(0, 0.12, 1)
+colors = PackedColorArray(1, 0.878431, 0, 0, 0.909804, 0.537255, 0.227451, 0.9, 0.760784, 0.290196, 0.109804, 0)
+
+[sub_resource type="LabelSettings" id="LabelSettings_caption"]
+font = ExtResource("8_font")
+font_size = 16
+font_color = Color(1, 0.972549, 0.92549, 1)
+outline_size = 1
+outline_color = Color(0.227451, 0.101961, 0.156863, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_skip"]
+font = ExtResource("8_font")
+font_size = 16
+font_color = Color(1, 0.972549, 0.92549, 1)
+outline_size = 1
+outline_color = Color(0.227451, 0.101961, 0.156863, 1)
+
+[sub_resource type="Animation" id="Animation_intro"]
+resource_name = "intro"
+length = 38.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Shots/ShotEarth:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7, 7.4, 8.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Shots/ShotEarth/Capsule:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 6.2, 7.8),
+"transitions": PackedFloat32Array(1, 1, 1.3),
+"update": 0,
+"values": [Vector2(320, 198), Vector2(320, 198), Vector2(348, -110)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Shots/ShotEarth/Capsule/Flame:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 5.6, 5.85, 6.3, 6.8, 7.3, 7.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0.45), Color(1, 1, 1, 1), Color(1, 1, 1, 0.55), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Shots/ShotSpace:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 7.4, 8.6, 19.4, 20.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Shots/ShotSpace/StarsFar:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(8.6, 20.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-150, 8)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Shots/ShotSpace/StarsNear:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(8.6, 20.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-400, -10)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Shots/ShotSpace/Capsule:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(8.6, 20.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(180, 168), Vector2(420, 150)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Shots/ShotSpace/EarthFar:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(8.6, 16.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(100, 250), Vector2(-50, 272)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Shots/ShotSpace/EarthFar:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(8.6, 13.5, 16.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Shots/ShotSpace/MarsFar:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(13, 20.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(690, 128), Vector2(520, 118)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Shots/ShotSpace/MarsFar:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(13, 15.2, 20.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Shots/ShotMars:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 19.4, 20.8, 36.8, 37.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Shots/ShotMars/Lander:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(20.6, 28.2),
+"transitions": PackedFloat32Array(1, 0.7),
+"update": 0,
+"values": [Vector2(260, -40), Vector2(260, 236)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Shots/ShotMars/Lander/Exhaust:emitting")
+tracks/13/interp = 0
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 20.7, 28.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Shots/ShotMars/Dust:emitting")
+tracks/14/interp = 0
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0, 26.6, 30.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Shots/ShotMars/Astronaut:position")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0, 28.6, 30.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(300, 268), Vector2(300, 268), Vector2(332, 268)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Shots/ShotMars/Astronaut:modulate")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0, 28.4, 29),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Shots/ShotMars/Flag:position")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0, 30.6, 31.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(350, 250), Vector2(350, 250), Vector2(350, 268)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Shots/ShotMars/Flag:modulate")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0, 30.6, 31.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("UI/Root/Caption:modulate")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0, 0.8, 1.5, 5.6, 6.4, 8.6, 9.4, 18.8, 19.8, 32, 32.8, 36.4, 37.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("UI/Root/IntiBubble:modulate")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0, 11, 11.8, 18.4, 19.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/21/type = "method"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath(".")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0.8, 6.4, 8.6, 11, 19.4, 19.8, 28.6, 30.6, 32, 37.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": ["intro.quito"],
+"method": &"show_caption"
+}, {
+"args": [],
+"method": &"hide_caption"
+}, {
+"args": ["intro.travel"],
+"method": &"show_caption"
+}, {
+"args": ["intro.inti"],
+"method": &"show_inti"
+}, {
+"args": [],
+"method": &"hide_inti"
+}, {
+"args": [],
+"method": &"hide_caption"
+}, {
+"args": [],
+"method": &"play_walk"
+}, {
+"args": [],
+"method": &"plant_flag"
+}, {
+"args": ["intro.day"],
+"method": &"show_caption"
+}, {
+"args": [],
+"method": &"finish_intro"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_intro"]
+_data = {
+&"intro": SubResource("Animation_intro")
+}
+
+[node name="Intro" type="Node2D"]
+script = ExtResource("1_script")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("..")
+libraries = {
+&"": SubResource("AnimationLibrary_intro")
+}
+autoplay = &""
+
+[node name="Letterbox" type="ColorRect" parent="."]
+offset_right = 640.0
+offset_bottom = 360.0
+mouse_filter = 2
+color = Color(0.0784314, 0.12549, 0.188235, 1)
+
+[node name="Shots" type="Node2D" parent="."]
+
+[node name="ShotEarth" type="Node2D" parent="Shots"]
+modulate = Color(1, 1, 1, 0)
+
+[node name="Sky" type="ColorRect" parent="Shots/ShotEarth"]
+offset_right = 640.0
+offset_bottom = 360.0
+mouse_filter = 2
+color = Color(0.45, 0.7, 0.92, 1)
+
+[node name="SkyHorizon" type="ColorRect" parent="Shots/ShotEarth"]
+offset_top = 150.0
+offset_right = 640.0
+offset_bottom = 230.0
+mouse_filter = 2
+color = Color(0.74, 0.88, 0.96, 1)
+
+[node name="Earth" type="Node2D" parent="Shots/ShotEarth"]
+script = ExtResource("2_backdrop")
+
+[node name="Pad" type="ColorRect" parent="Shots/ShotEarth"]
+offset_left = 286.0
+offset_top = 226.0
+offset_right = 354.0
+offset_bottom = 234.0
+mouse_filter = 2
+color = Color(0.227451, 0.101961, 0.156863, 1)
+
+[node name="Capsule" type="Sprite2D" parent="Shots/ShotEarth"]
+position = Vector2(320, 198)
+texture = ExtResource("3_lander")
+
+[node name="Flame" type="Node2D" parent="Shots/ShotEarth/Capsule"]
+modulate = Color(1, 1, 1, 0)
+show_behind_parent = true
+position = Vector2(0, 28)
+
+[node name="Outer" type="Polygon2D" parent="Shots/ShotEarth/Capsule/Flame"]
+color = Color(1, 0.415686, 0.12549, 1)
+polygon = PackedVector2Array(-8, 0, 0, 28, 8, 0)
+
+[node name="Inner" type="Polygon2D" parent="Shots/ShotEarth/Capsule/Flame"]
+color = Color(1, 0.878431, 0, 1)
+polygon = PackedVector2Array(-4, 0, 0, 16, 4, 0)
+
+[node name="ShotSpace" type="Node2D" parent="Shots"]
+modulate = Color(1, 1, 1, 0)
+
+[node name="Space" type="ColorRect" parent="Shots/ShotSpace"]
+offset_right = 640.0
+offset_bottom = 360.0
+mouse_filter = 2
+color = Color(0.0784314, 0.12549, 0.188235, 1)
+
+[node name="StarsFar" type="Node2D" parent="Shots/ShotSpace"]
+unique_name_in_owner = true
+
+[node name="StarsNear" type="Node2D" parent="Shots/ShotSpace"]
+unique_name_in_owner = true
+
+[node name="EarthFar" type="Node2D" parent="Shots/ShotSpace"]
+position = Vector2(100, 250)
+script = ExtResource("2_backdrop")
+kind = 1
+
+[node name="MarsFar" type="Node2D" parent="Shots/ShotSpace"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(690, 128)
+script = ExtResource("2_backdrop")
+kind = 2
+
+[node name="Capsule" type="Sprite2D" parent="Shots/ShotSpace"]
+position = Vector2(180, 168)
+texture = ExtResource("3_lander")
+
+[node name="ShotMars" type="Node2D" parent="Shots"]
+modulate = Color(1, 1, 1, 0)
+
+[node name="Sky" type="ColorRect" parent="Shots/ShotMars"]
+offset_right = 640.0
+offset_bottom = 268.0
+mouse_filter = 2
+color = Color(1, 0.541176, 0.345098, 1)
+
+[node name="Horizon" type="ColorRect" parent="Shots/ShotMars"]
+offset_top = 150.0
+offset_right = 640.0
+offset_bottom = 268.0
+mouse_filter = 2
+color = Color(1, 0.752941, 0.658824, 1)
+
+[node name="Hills" type="Node2D" parent="Shots/ShotMars"]
+script = ExtResource("2_backdrop")
+kind = 3
+
+[node name="Ground" type="ColorRect" parent="Shots/ShotMars"]
+offset_top = 268.0
+offset_right = 640.0
+offset_bottom = 360.0
+mouse_filter = 2
+color = Color(0.909804, 0.537255, 0.227451, 1)
+
+[node name="GroundEdge" type="ColorRect" parent="Shots/ShotMars"]
+offset_top = 268.0
+offset_right = 640.0
+offset_bottom = 274.0
+mouse_filter = 2
+color = Color(0.760784, 0.290196, 0.109804, 1)
+
+[node name="Craters" type="Node2D" parent="Shots/ShotMars"]
+script = ExtResource("2_backdrop")
+kind = 4
+
+[node name="Dust" type="CPUParticles2D" parent="Shots/ShotMars"]
+position = Vector2(260, 266)
+emitting = false
+amount = 42
+lifetime = 1.15
+preprocess = 0.25
+randomness = 0.4
+visibility_rect = Rect2(-80, -60, 160, 90)
+texture = SubResource("GradientTexture2D_puff")
+emission_shape = 3
+emission_rect_extents = Vector2(48, 4)
+direction = Vector2(0, -1)
+spread = 78.0
+gravity = Vector2(0, 28)
+initial_velocity_min = 12.0
+initial_velocity_max = 34.0
+scale_amount_min = 1.5
+scale_amount_max = 3.5
+color_ramp = SubResource("Gradient_life")
+
+[node name="Lander" type="Sprite2D" parent="Shots/ShotMars"]
+position = Vector2(260, -40)
+texture = ExtResource("3_lander")
+
+[node name="Exhaust" type="CPUParticles2D" parent="Shots/ShotMars/Lander"]
+show_behind_parent = true
+position = Vector2(0, 30)
+emitting = false
+amount = 36
+lifetime = 0.55
+randomness = 0.35
+local_coords = false
+visibility_rect = Rect2(-100, -20, 200, 180)
+texture = SubResource("GradientTexture2D_puff")
+emission_shape = 3
+emission_rect_extents = Vector2(10, 3)
+direction = Vector2(0, 1)
+spread = 32.0
+gravity = Vector2(0, 36)
+initial_velocity_min = 20.0
+initial_velocity_max = 52.0
+scale_amount_min = 1.4
+scale_amount_max = 3.2
+color_ramp = SubResource("Gradient_life")
+
+[node name="Astronaut" type="AnimatedSprite2D" parent="Shots/ShotMars"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+position = Vector2(300, 268)
+sprite_frames = ExtResource("5_frames")
+animation = &"walk_right"
+offset = Vector2(0, -14)
+
+[node name="Flag" type="Sprite2D" parent="Shots/ShotMars"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(350, 250)
+texture = ExtResource("4_flag")
+offset = Vector2(15, -12)
+
+[node name="UI" type="CanvasLayer" parent="."]
+layer = 10
+
+[node name="Root" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("7_theme")
+
+[node name="Caption" type="Label" parent="UI/Root"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -280.0
+offset_top = 12.0
+offset_right = 280.0
+offset_bottom = 96.0
+grow_horizontal = 2
+mouse_filter = 2
+label_settings = SubResource("LabelSettings_caption")
+horizontal_alignment = 1
+vertical_alignment = 0
+autowrap_mode = 3
+
+[node name="SkipHint" type="Label" parent="UI/Root"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -248.0
+offset_top = 6.0
+offset_right = -6.0
+offset_bottom = 28.0
+mouse_filter = 2
+label_settings = SubResource("LabelSettings_skip")
+text = "Esc, Start o clic para saltar"
+horizontal_alignment = 2
+
+[node name="IntiBubble" parent="UI/Root" instance=ExtResource("6_box")]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+show_close = false
+bottom_margin = 8.0

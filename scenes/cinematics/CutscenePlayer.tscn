@@ -1,0 +1,284 @@
+[gd_scene load_steps=14 format=3]
+
+[ext_resource type="Script" path="res://scenes/cinematics/CutscenePlayer.gd" id="1_script"]
+[ext_resource type="Script" path="res://scenes/intro/Backdrop.gd" id="2_backdrop"]
+[ext_resource type="PackedScene" path="res://scenes/ui/IntiBox.tscn" id="3_box"]
+[ext_resource type="Theme" path="res://ui/theme/condor_theme.tres" id="4_theme"]
+[ext_resource type="FontFile" path="res://assets/fonts/m5x7.ttf" id="5_font"]
+
+[sub_resource type="Animation" id="Animation_bars_in"]
+resource_name = "bars_in"
+length = 0.35
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BarTop:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.35),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector2(0, -28), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BarBottom:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.35),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector2(0, 360), Vector2(0, 332)]
+}
+
+[sub_resource type="Animation" id="Animation_bars_out"]
+resource_name = "bars_out"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BarTop:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(2, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -28)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BarBottom:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(2, 1),
+"update": 0,
+"values": [Vector2(0, 332), Vector2(0, 360)]
+}
+
+[sub_resource type="Animation" id="Animation_black_in"]
+resource_name = "black_in"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Backdrop:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_black_out"]
+resource_name = "black_out"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Backdrop:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_signal_trip"]
+resource_name = "signal_trip"
+length = 3.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Backdrop:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Stage/SignalTrip:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Stage/SignalTrip/Pulse:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.9, 3.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(150, 150), Vector2(150, 150), Vector2(490, 150)]
+}
+
+[sub_resource type="Animation" id="Animation_signal_trip_out"]
+resource_name = "signal_trip_out"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Backdrop:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Stage/SignalTrip:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cutscenes"]
+_data = {
+&"bars_in": SubResource("Animation_bars_in"),
+&"bars_out": SubResource("Animation_bars_out"),
+&"black_in": SubResource("Animation_black_in"),
+&"black_out": SubResource("Animation_black_out"),
+&"signal_trip": SubResource("Animation_signal_trip"),
+&"signal_trip_out": SubResource("Animation_signal_trip_out")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_hint"]
+font = ExtResource("5_font")
+font_size = 16
+font_color = Color(1, 0.972549, 0.92549, 1)
+outline_size = 1
+outline_color = Color(0.227451, 0.101961, 0.156863, 1)
+
+[node name="CutscenePlayer" type="CanvasLayer"]
+process_mode = 3
+layer = 50
+script = ExtResource("1_script")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("..")
+libraries = {
+&"": SubResource("AnimationLibrary_cutscenes")
+}
+
+[node name="Backdrop" type="ColorRect" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_right = 640.0
+offset_bottom = 360.0
+mouse_filter = 2
+color = Color(0.0784314, 0.12549, 0.188235, 1)
+
+[node name="Stage" type="Node2D" parent="."]
+
+[node name="SignalTrip" type="Node2D" parent="Stage"]
+modulate = Color(1, 1, 1, 0)
+
+[node name="Mars" type="Node2D" parent="Stage/SignalTrip"]
+position = Vector2(120, 150)
+script = ExtResource("2_backdrop")
+kind = 2
+
+[node name="Earth" type="Node2D" parent="Stage/SignalTrip"]
+position = Vector2(520, 150)
+script = ExtResource("2_backdrop")
+kind = 1
+
+[node name="Pulse" type="Node2D" parent="Stage/SignalTrip"]
+position = Vector2(150, 150)
+
+[node name="Glow" type="ColorRect" parent="Stage/SignalTrip/Pulse"]
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 4.0
+mouse_filter = 2
+color = Color(1, 0.878431, 0, 0.45)
+
+[node name="Core" type="ColorRect" parent="Stage/SignalTrip/Pulse"]
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 2.0
+offset_bottom = 2.0
+mouse_filter = 2
+color = Color(1, 0.972549, 0.92549, 1)
+
+[node name="BarTop" type="ColorRect" parent="."]
+offset_top = -28.0
+offset_right = 640.0
+mouse_filter = 2
+color = Color(0.0784314, 0.12549, 0.188235, 1)
+
+[node name="BarBottom" type="ColorRect" parent="."]
+offset_top = 360.0
+offset_right = 640.0
+offset_bottom = 388.0
+mouse_filter = 2
+color = Color(0.0784314, 0.12549, 0.188235, 1)
+
+[node name="Root" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("4_theme")
+
+[node name="SkipHint" type="Label" parent="Root"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -168.0
+offset_top = 4.0
+offset_right = -6.0
+offset_bottom = 24.0
+grow_horizontal = 0
+mouse_filter = 2
+label_settings = SubResource("LabelSettings_hint")
+text = "Saltar (Esc)"
+horizontal_alignment = 2
+
+[node name="Dialog" parent="Root" instance=ExtResource("3_box")]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+show_close = false
+bottom_margin = 32.0

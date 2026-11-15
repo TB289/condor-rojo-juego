@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ModuleData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://systems/ModuleData.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://assets/art/base/greenhouse.png" id="2_tex"]
+
+[resource]
+script = ExtResource("1_script")
+id = &"greenhouse"
+display_name = "Invernadero"
+display_name_en = "Greenhouse"
+description = "Aquí crecen plantas: te dan comida, un poquito de oxígeno y limpian el dióxido de carbono que exhalas. Necesitan luz y calor, así que gasta mucha energía."
+description_en = "Plants grow here: they give you food, a little oxygen, and they clean the carbon dioxide you breathe out. They need light and heat, so it uses a lot of energy."
+texture = ExtResource("2_tex")
+size_tiles = Vector2i(4, 3)
+energy_cost_per_sol = 8.0
+oxygen_per_sol = 3.0
+food_per_sol = 14.0

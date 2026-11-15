@@ -1,0 +1,72 @@
+[gd_scene load_steps=14 format=3]
+
+[ext_resource type="Script" path="res://scenes/mars/MarsMap.gd" id="1_script"]
+[ext_resource type="TileSet" path="res://data/tiles/mars_tileset.tres" id="2_tileset"]
+[ext_resource type="PackedScene" path="res://scenes/player/Player.tscn" id="3_player"]
+[ext_resource type="Texture2D" path="res://assets/art/base/ship_integrated.png" id="4_lander"]
+[ext_resource type="Texture2D" path="res://assets/art/base/flag_ecuador.png" id="5_flag"]
+[ext_resource type="PackedScene" path="res://scenes/player/CameraRig.tscn" id="6_camera"]
+[ext_resource type="PackedScene" path="res://scenes/base/BasePlacer.tscn" id="7_placer"]
+[ext_resource type="Script" path="res://scenes/mars/MissionArea.gd" id="8_mission_area"]
+[ext_resource type="PackedScene" path="res://scenes/mars/IceSite.tscn" id="9_ice"]
+[ext_resource type="Script" path="res://scenes/mars/FlagWave.gd" id="10_flag"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lander"]
+size = Vector2(48, 12)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lander_reach"]
+radius = 36.0
+
+[node name="MarsMap" type="Node2D"]
+script = ExtResource("1_script")
+
+[node name="Ground" type="TileMapLayer" parent="."]
+tile_set = ExtResource("2_tileset")
+
+[node name="Decals" type="TileMapLayer" parent="."]
+tile_set = ExtResource("2_tileset")
+
+[node name="Entities" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="Player" parent="Entities" instance=ExtResource("3_player")]
+position = Vector2(640, 608)
+
+[node name="Lander" type="StaticBody2D" parent="Entities"]
+position = Vector2(784, 552)
+
+[node name="Sprite2D" type="Sprite2D" parent="Entities/Lander"]
+texture = ExtResource("4_lander")
+offset = Vector2(0, -32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Entities/Lander"]
+position = Vector2(0, -7)
+shape = SubResource("RectangleShape2D_lander")
+
+[node name="MissionArea" type="Area2D" parent="Entities/Lander"]
+collision_layer = 0
+script = ExtResource("8_mission_area")
+target_id = &"lander"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Entities/Lander/MissionArea"]
+position = Vector2(0, -7)
+shape = SubResource("CircleShape2D_lander_reach")
+
+[node name="Flag" type="Sprite2D" parent="Entities"]
+position = Vector2(716, 568)
+texture = ExtResource("5_flag")
+offset = Vector2(15, -12)
+script = ExtResource("10_flag")
+
+[node name="IceSite" parent="Entities" instance=ExtResource("9_ice")]
+position = Vector2(424, 776)
+
+[node name="BasePlacer" parent="." node_paths=PackedStringArray("entities", "player", "lander") instance=ExtResource("7_placer")]
+entities = NodePath("../Entities")
+player = NodePath("../Entities/Player")
+lander = NodePath("../Entities/Lander")
+
+[node name="Bounds" type="StaticBody2D" parent="."]
+
+[node name="CameraRig" parent="." instance=ExtResource("6_camera")]
+target_path = NodePath("../Entities/Player")

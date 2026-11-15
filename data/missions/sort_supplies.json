@@ -1,0 +1,41 @@
+{
+  "id": "sort_supplies",
+  "category": "secondary",
+  "order": 5,
+  "title": "Ordenar la casa",
+  "description": "Entra al hábitat y ordena las cajas. Así encuentras las cosas sin buscar.",
+  "science": "En una estación espacial cada cosa tiene un sitio fijo. Así se halla rápido, aunque lleves guantes.",
+  "done": "Las cajas quedaron en su sitio. Había un tanque de oxígeno de repuesto.",
+  "unlock": "fix_solar_panel",
+  "requires_module": "habitat",
+  "objectives": [
+    {
+      "id": "obj_1",
+      "type": "enter",
+      "target": "habitat",
+      "label": "Entra al hábitat",
+      "label_en": "Enter the habitat"
+    },
+    {
+      "id": "obj_2",
+      "type": "repair",
+      "target": "habitat_supplies",
+      "prompt": "Ordenar",
+      "prompt_en": "Sort",
+      "label": "Ordena las cajas",
+      "seconds": 1.5,
+      "label_en": "Sort the boxes"
+    }
+  ],
+  "rewards": {
+    "energy": 0,
+    "food": 0,
+    "oxygen": 6,
+    "flag": "supplies_sorted"
+  },
+  "title_en": "Tidy the house",
+  "description_en": "Enter the habitat and sort the boxes. That way you find things without searching.",
+  "science_en": "On a space station every thing has a fixed place. You find it fast, even with gloves on.",
+  "done_en": "The boxes are in their place. There was a spare oxygen tank.",
+  "min_sol": 2
+}

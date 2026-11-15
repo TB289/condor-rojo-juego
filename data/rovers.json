@@ -1,0 +1,154 @@
+{
+  "rover_spirit": {
+    "name": "Spirit",
+    "texture": "res://assets/art/rovers/spirit.png",
+    "launched": {
+      "en": "June 10, 2003",
+      "es": "10 de junio de 2003"
+    },
+    "landed": {
+      "en": "January 4, 2004",
+      "es": "4 de enero de 2004"
+    },
+    "landing_date": "2004-01-04",
+    "purpose": {
+      "en": "Look for signs of past water in rocks and soil.",
+      "es": "Buscar señales de agua pasada en rocas y suelo."
+    },
+    "achievement": {
+      "en": "Explored Gusev Crater and found evidence that Mars was once wetter.",
+      "es": "Exploró el cráter Gusev y encontró pruebas de que Marte fue más húmedo."
+    },
+    "real_site": {
+      "en": "Gusev Crater",
+      "es": "Cráter Gusev"
+    },
+    "source": "https://science.nasa.gov/mission/mer-spirit/"
+  },
+  "rover_opportunity": {
+    "name": "Opportunity",
+    "texture": "res://assets/art/rovers/opportunity.png",
+    "launched": {
+      "en": "July 7, 2003",
+      "es": "7 de julio de 2003"
+    },
+    "landed": {
+      "en": "January 25, 2004",
+      "es": "25 de enero de 2004"
+    },
+    "landing_date": "2004-01-25",
+    "purpose": {
+      "en": "Study rocks for evidence of past liquid water.",
+      "es": "Estudiar rocas para buscar evidencia de agua líquida pasada."
+    },
+    "achievement": {
+      "en": "Found water-formed minerals and explored Mars for almost 15 years.",
+      "es": "Halló minerales formados con agua y exploró Marte por casi 15 años."
+    },
+    "real_site": {
+      "en": "Meridiani Planum",
+      "es": "Meridiani Planum"
+    },
+    "source": "https://science.nasa.gov/mission/mer-opportunity/"
+  },
+  "rover_curiosity": {
+    "name": "Curiosity",
+    "texture": "res://assets/art/rovers/curiosity.png",
+    "launched": {
+      "en": "November 26, 2011",
+      "es": "26 de noviembre de 2011"
+    },
+    "landed": {
+      "en": "August 6, 2012",
+      "es": "6 de agosto de 2012"
+    },
+    "landing_date": "2012-08-06",
+    "purpose": {
+      "en": "Check if ancient Mars could support microbial life.",
+      "es": "Comprobar si el Marte antiguo pudo albergar vida microbiana."
+    },
+    "achievement": {
+      "en": "Studied Gale Crater rocks and confirmed ancient habitable conditions.",
+      "es": "Estudió rocas del cráter Gale y confirmó antiguas condiciones habitables."
+    },
+    "real_site": {
+      "en": "Gale Crater",
+      "es": "Cráter Gale"
+    },
+    "source": "https://science.nasa.gov/mission/msl-curiosity/"
+  },
+  "rover_perseverance": {
+    "name": "Perseverance",
+    "texture": "res://assets/art/rovers/perseverance.png",
+    "launched": {
+      "en": "July 30, 2020",
+      "es": "30 de julio de 2020"
+    },
+    "landed": {
+      "en": "February 18, 2021",
+      "es": "18 de febrero de 2021"
+    },
+    "landing_date": "2021-02-18",
+    "purpose": {
+      "en": "Search for ancient life and collect rock samples.",
+      "es": "Buscar vida antigua y recolectar muestras de roca."
+    },
+    "achievement": {
+      "en": "Explores Jezero Crater and stores samples from an ancient lake delta.",
+      "es": "Explora el cráter Jezero y guarda muestras de un antiguo delta lacustre."
+    },
+    "real_site": {
+      "en": "Jezero Crater",
+      "es": "Cráter Jezero"
+    },
+    "source": "https://science.nasa.gov/mission/mars-2020-perseverance/"
+  },
+  "rover_sojourner": {
+    "name": "Sojourner",
+    "texture": "res://assets/art/rovers/sojourner.png",
+    "launched": {
+      "en": "December 4, 1996",
+      "es": "4 de diciembre de 1996"
+    },
+    "landed": {
+      "en": "July 4, 1997",
+      "es": "4 de julio de 1997"
+    },
+    "landing_date": "1997-07-04",
+    "purpose": {
+      "en": "Show that a small rover could explore Mars and study nearby rocks.",
+      "es": "Demostrar que un pequeño rover podía explorar Marte y estudiar rocas cercanas."
+    },
+    "achievement": {
+      "en": "Became the first rover on Mars and explored around Pathfinder.",
+      "es": "Fue el primer rover en Marte y exploró alrededor de Pathfinder."
+    },
+    "real_site": {
+      "en": "Ares Vallis",
+      "es": "Ares Vallis"
+    },
+    "source": "https://science.nasa.gov/mission/mars-pathfinder/"
+  },
+  "rover_support": {
+    "name": "Cóndor Support Rover",
+    "texture": "res://assets/art/base/rover.png",
+    "purpose": {
+      "en": "Assist the astronaut with equipment and field operations near base.",
+      "es": "Ayudar al astronauta con equipos y tareas cerca de la base."
+    },
+    "achievement": {
+      "en": "Repairable on Sol 1; ready to drive from Sol 2.",
+      "es": "Reparable en el Sol 1; disponible para conducir desde el Sol 2."
+    },
+    "time_on_mars": {
+      "en": "Since Sol 1",
+      "es": "Desde el Sol 1"
+    },
+    "sent": {
+      "en": "With the expedition (fictional)",
+      "es": "Con la expedición (ficticia)"
+    },
+    "landing_date": "",
+    "source": ""
+  }
+}
