@@ -137,12 +137,12 @@
       "es": "Ayudar al astronauta con equipos y tareas cerca de la base."
     },
     "achievement": {
-      "en": "Repairable on Sol 1; ready to drive from Sol 2.",
-      "es": "Reparable en el Sol 1; disponible para conducir desde el Sol 2."
+      "en": "Repairable on Day 1; ready to drive from Day 2.",
+      "es": "Reparable el Día 1; disponible para conducir desde el Día 2."
     },
     "time_on_mars": {
-      "en": "Since Sol 1",
-      "es": "Desde el Sol 1"
+      "en": "Since Day 1",
+      "es": "Desde el Día 1"
     },
     "sent": {
       "en": "With the expedition (fictional)",

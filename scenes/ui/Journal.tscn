@@ -23,10 +23,10 @@ anti_aliasing = false
 
 [sub_resource type="LabelSettings" id="LabelSettings_title"]
 font = ExtResource("3_font")
-font_size = 18
-font_color = Color(1, 0.878431, 0, 1)
-outline_size = 1
-outline_color = Color(0.227451, 0.101961, 0.156863, 1)
+font_size = 16
+font_color = Color(1, 0.988235, 0.909804, 1)
+outline_size = 2
+outline_color = Color(0.0784314, 0.12549, 0.188235, 1)
 
 [node name="Journal" type="CanvasLayer"]
 process_mode = 3

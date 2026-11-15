@@ -115,7 +115,7 @@ func hide_caption() -> void:
 
 
 func show_inti(text: String) -> void:
-	_inti.present(text, "", 0.03, false)
+	_inti.present(text, "", 0.02, false)
 
 
 func hide_inti() -> void:

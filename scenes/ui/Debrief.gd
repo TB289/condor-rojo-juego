@@ -147,33 +147,14 @@ func _fill() -> void:
 	_fill_missions(true)
 	_fill_missions(false)
 	mains_title.show()
-	var points := Settings.pick_list(ending, "que_aprendiste")
-	learned_title.show()
-	if points.is_empty():
-		var learned := Settings.pick(ending, "learned")
-		learned_label.text = learned
-		learned_label.visible = not learned.is_empty()
-	else:
-		learned_label.visible = false
-		for point in points:
-			lessons.add_child(_line("· %s" % String(point), INK))
-	for lesson in _data.get("lessons", []):
-		if not lesson is Dictionary:
-			continue
-		var row: Dictionary = lesson
-		var flag := String(row.get("flag", ""))
-		var always := bool(row.get("always", false))
-		var flagged := not flag.is_empty() and bool(GameState.get_flag(StringName(flag)))
-		if always or flagged:
-			lessons.add_child(_line("· %s" % Settings.pick(row, "text"), INK))
+	learned_title.hide()
+	learned_label.hide()
 	decisions_title.show()
 	if GameState.decisions.is_empty():
 		decisions.add_child(_line(Settings.text("debrief.none_yet"), INK))
 	else:
 		var total := GameState.decisions.size()
-		var start := maxi(total - 2, 0)
-		if start > 0:
-			decisions.add_child(_line(Settings.text("debrief.more") % total, INK))
+		var start := maxi(total - 3, 0)
 		for i in range(start, total):
 			var entry: Dictionary = GameState.decisions[i]
 			var written := Settings.visible_text(String(entry.get("text", "")))

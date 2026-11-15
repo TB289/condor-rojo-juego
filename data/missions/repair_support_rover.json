@@ -10,8 +10,8 @@
   "description_en": "The support rover needs its drive system repaired. Reach it and hold E (or touch Interact) to repair it.",
   "science": "Los rovers necesitan ruedas, motores y energía en buen estado para explorar terrenos marcianos.",
   "science_en": "Rovers need working wheels, motors and electrical power to explore Martian terrain.",
-  "done": "¡Rover Cóndor reparado! Podrás conducirlo desde el Sol 2.",
-  "done_en": "Cóndor rover repaired! Driving unlocks on Sol 2.",
+  "done": "¡Rover Cóndor reparado! Podrás conducirlo desde el Día 2.",
+  "done_en": "Cóndor rover repaired! Driving unlocks on Day 2.",
   "objectives": [
     {
       "id": "obj_1",

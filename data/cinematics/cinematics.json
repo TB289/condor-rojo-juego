@@ -1,155 +1,155 @@
 {
-	"_note": "Cinemáticas cortas entre misiones y antes del cierre. trigger: \"mission:<id>\" se dispara sola al completar esa misión; \"ending:<id>\" la pide EndingSystem antes del Debrief. Beats: line, anim, wait, focus (mueve la cámara a un módulo o zona de misión).",
-	"cinematics": [
-		{
-			"id": "after_fix_panel",
-			"trigger": "mission:fix_solar_panel",
-			"skippable": true,
-			"beats": [
-				{
-					"type": "focus",
-					"target": "solar_panel",
-					"seconds": 1.2
-				},
-				{
-					"type": "line",
-					"speaker": "INTI",
-					"text": "Mira el panel. Sin esa capa de polvo, brilla otra vez.",
-					"text_en": "Look at the panel. Without that layer of dust, it shines again."
-				},
-				{
-					"type": "line",
-					"speaker": "INTI",
-					"text": "El viento de Marte a veces lo limpia un poco, y otras veces trae más polvo. Conviene revisarlo seguido.",
-					"text_en": "The wind on Mars sometimes cleans it a little, and other times it brings more dust. It is worth checking often."
-				}
-			]
-		},
-		{
-			"id": "after_potato",
-			"trigger": "mission:grow_potato",
-			"skippable": true,
-			"beats": [
-				{
-					"type": "focus",
-					"target": "greenhouse",
-					"seconds": 1.2
-				},
-				{
-					"type": "line",
-					"speaker": "INTI",
-					"text": "En el invernadero asoma una hojita verde... ¡y debajo hay una papa!",
-					"text_en": "A little green leaf is showing in the greenhouse... and under it there is a potato!"
-				},
-				{
-					"type": "line",
-					"speaker": "INTI",
-					"text": "Es la primera comida que crece en Marte gracias a ti. Mantener el invernadero también gasta energía.",
-					"text_en": "It is the first food grown on Mars thanks to you. Keeping the greenhouse going also uses energy."
-				}
-			]
-		},
-		{
-			"id": "after_contact_earth",
-			"trigger": "mission:contact_earth",
-			"skippable": true,
-			"beats": [
-				{
-					"type": "anim",
-					"name": "signal_trip"
-				},
-				{
-					"type": "line",
-					"speaker": "INTI",
-					"text": "Tu mensaje viaja por el espacio a la velocidad de la luz. No hay nada más rápido.",
-					"text_en": "Your message travels through space at the speed of light. Nothing is faster."
-				},
-				{
-					"type": "line",
-					"speaker": "INTI",
-					"text": "Aun así tarda entre 3 y 22 minutos en llegar. Depende de qué tan lejos estén Marte y la Tierra ese día.",
-					"text_en": "Even so, it takes 3 to 22 minutes to arrive. It depends on how far apart Mars and Earth are that day."
-				},
-				{
-					"type": "line",
-					"speaker": "INTI",
-					"text": "Por eso no se puede conversar en vivo: mandas tu mensaje y esperas la respuesta.",
-					"text_en": "That is why you cannot talk live: you send your message and wait for the answer."
-				},
-				{
-					"type": "anim",
-					"name": "signal_trip_out"
-				}
-			]
-		},
-		{
-			"id": "ending_exemplary",
-			"trigger": "ending:ejemplar",
-			"skippable": true,
-			"beats": [
-				{
-					"type": "anim",
-					"name": "black_in"
-				},
-				{
-					"type": "line",
-					"speaker": "INTI",
-					"text": "Día tras día, la base siguió en pie gracias a tus decisiones.",
-					"text_en": "Day after day, the base stayed standing because of your decisions."
-				},
-				{
-					"type": "line",
-					"speaker": "INTI",
-					"text": "Desde Ecuador, mucha gente mira el cielo y está orgullosa de ti.",
-					"text_en": "From Ecuador, a lot of people look at the sky and are proud of you."
-				}
-			]
-		},
-		{
-			"id": "ending_close",
-			"trigger": "ending:justo",
-			"skippable": true,
-			"beats": [
-				{
-					"type": "anim",
-					"name": "black_in"
-				},
-				{
-					"type": "line",
-					"speaker": "INTI",
-					"text": "Fue una misión difícil, pero llegaste al final.",
-					"text_en": "It was a hard mission, but you reached the end."
-				},
-				{
-					"type": "line",
-					"speaker": "INTI",
-					"text": "Ahora veamos juntos qué se puede hacer mejor la próxima vez.",
-					"text_en": "Now let's see together what can be done better next time."
-				}
-			]
-		},
-		{
-			"id": "ending_rescue",
-			"trigger": "ending:rescate",
-			"skippable": true,
-			"beats": [
-				{
-					"type": "anim",
-					"name": "black_in"
-				},
-				{
-					"type": "line",
-					"speaker": "INTI",
-					"text": "La nave de apoyo ya llegó. Estás a salvo.",
-					"text_en": "The support ship has arrived. You are safe."
-				},
-				{
-					"type": "line",
-					"speaker": "INTI",
-					"text": "Pedir ayuda a tiempo también es cosa de buenos astronautas.",
-					"text_en": "Asking for help in time is also what good astronauts do."
-				}
-			]
-		}
-	]
+  "_note": "Cinemáticas cortas entre misiones y antes del cierre. trigger: \"mission:<id>\" se dispara sola al completar esa misión; \"ending:<id>\" la pide EndingSystem antes del Debrief. Beats: line, anim, wait, focus (mueve la cámara a un módulo o zona de misión).",
+  "cinematics": [
+    {
+      "id": "after_fix_panel",
+      "trigger": "mission:fix_solar_panel",
+      "skippable": true,
+      "beats": [
+        {
+          "type": "focus",
+          "target": "solar_panel",
+          "seconds": 1.2
+        },
+        {
+          "type": "line",
+          "speaker": "INTI",
+          "text": "Mira el panel. Sin esa capa de polvo, brilla otra vez.",
+          "text_en": "Look at the panel. Without that layer of dust, it shines again."
+        },
+        {
+          "type": "line",
+          "speaker": "INTI",
+          "text": "El viento de Marte a veces lo limpia un poco, y otras veces trae más polvo. Conviene revisarlo seguido.",
+          "text_en": "The wind on Mars sometimes cleans it a little, and other times it brings more dust. It is worth checking often."
+        }
+      ]
+    },
+    {
+      "id": "after_potato",
+      "trigger": "mission:grow_potato",
+      "skippable": true,
+      "beats": [
+        {
+          "type": "focus",
+          "target": "greenhouse",
+          "seconds": 1.2
+        },
+        {
+          "type": "line",
+          "speaker": "INTI",
+          "text": "En el invernadero asoma una hojita verde... ¡y debajo hay una papa!",
+          "text_en": "A little green leaf is showing in the greenhouse... and under it there is a potato!"
+        },
+        {
+          "type": "line",
+          "speaker": "INTI",
+          "text": "Es la primera comida que crece en Marte gracias a ti. Mantener el invernadero también gasta energía.",
+          "text_en": "It is the first food grown on Mars thanks to you. Keeping the greenhouse going also uses energy."
+        }
+      ]
+    },
+    {
+      "id": "after_contact_earth",
+      "trigger": "mission:contact_earth",
+      "skippable": true,
+      "beats": [
+        {
+          "type": "anim",
+          "name": "signal_trip"
+        },
+        {
+          "type": "line",
+          "speaker": "INTI",
+          "text": "Tu mensaje viaja por el espacio a la velocidad de la luz. No hay nada más rápido.",
+          "text_en": "Your message travels through space at the speed of light. Nothing is faster."
+        },
+        {
+          "type": "line",
+          "speaker": "INTI",
+          "text": "Aun así tarda entre 3 y 22 minutos en llegar. Depende de qué tan lejos estén Marte y la Tierra ese día.",
+          "text_en": "Even so, it takes 3 to 22 minutes to arrive. It depends on how far apart Mars and Earth are that day."
+        },
+        {
+          "type": "line",
+          "speaker": "INTI",
+          "text": "Por eso no se puede conversar en vivo: mandas tu mensaje y esperas la respuesta.",
+          "text_en": "That is why you cannot talk live: you send your message and wait for the answer."
+        },
+        {
+          "type": "anim",
+          "name": "signal_trip_out"
+        }
+      ]
+    },
+    {
+      "id": "ending_exemplary",
+      "trigger": "ending:ejemplar",
+      "skippable": true,
+      "beats": [
+        {
+          "type": "anim",
+          "name": "black_in"
+        },
+        {
+          "type": "line",
+          "speaker": "INTI",
+          "text": "Misión ejemplar: la base siguió en pie.",
+          "text_en": "Exemplary mission: the base stayed standing."
+        },
+        {
+          "type": "line",
+          "speaker": "INTI",
+          "text": "Desde Ecuador, mucha gente mira el cielo y está orgullosa de ti.",
+          "text_en": "From Ecuador, a lot of people look at the sky and are proud of you."
+        }
+      ]
+    },
+    {
+      "id": "ending_close",
+      "trigger": "ending:justo",
+      "skippable": true,
+      "beats": [
+        {
+          "type": "anim",
+          "name": "black_in"
+        },
+        {
+          "type": "line",
+          "speaker": "INTI",
+          "text": "Volvimos justo: llegaste al final.",
+          "text_en": "We made it, just: you reached the end."
+        },
+        {
+          "type": "line",
+          "speaker": "INTI",
+          "text": "Ahora veamos juntos qué se puede hacer mejor la próxima vez.",
+          "text_en": "Now let's see together what can be done better next time."
+        }
+      ]
+    },
+    {
+      "id": "ending_rescue",
+      "trigger": "ending:rescate",
+      "skippable": true,
+      "beats": [
+        {
+          "type": "anim",
+          "name": "black_in"
+        },
+        {
+          "type": "line",
+          "speaker": "INTI",
+          "text": "Rescate: estás a salvo.",
+          "text_en": "Rescue: you are safe."
+        },
+        {
+          "type": "line",
+          "speaker": "INTI",
+          "text": "Pedir ayuda a tiempo también es cosa de buenos astronautas.",
+          "text_en": "Asking for help in time is also what good astronauts do."
+        }
+      ]
+    }
+  ]
 }

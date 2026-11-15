@@ -34,7 +34,7 @@ var _open := false
 var _closing := false
 var _fade := 0.0
 var _elapsed := 0.0
-var _step := 0.025
+var _step := 0.014
 var _capture := false
 var _text_width := 180.0
 var _body_lines := 1
@@ -127,7 +127,7 @@ func set_right_inset(value: float) -> void:
 		_place()
 
 
-func present(body: String, tip: String = "", step: float = 0.025, capture: bool = true) -> void:
+func present(body: String, tip: String = "", step: float = 0.014, capture: bool = true) -> void:
 	_body = body
 	_tip = tip
 	_count = 0

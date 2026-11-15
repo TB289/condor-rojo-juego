@@ -52,14 +52,14 @@ func _ready() -> void:
 	_text = Label.new()
 	_text.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	_text.add_theme_font_override("font", FONT)
-	_text.add_theme_font_size_override("font_size", 12)
+	_text.add_theme_font_size_override("font_size", 16)
 	_text.add_theme_color_override("font_color", Color("fffce8"))
-	_text.add_theme_color_override("font_outline_color", Color("1a0c14"))
-	_text.add_theme_constant_override("outline_size", 3)
+	_text.add_theme_color_override("font_outline_color", Color("142030"))
+	_text.add_theme_constant_override("outline_size", 2)
 	_text.z_index = 10
-	_text.position = Vector2(-38, -61)
-	_text.size = Vector2(76, 18)
+	_text.clip_text = false
 	_text.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	_text.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
 	add_child(_text)
 
 	# Player is reparented into this interior on entry. Connect to that same instance.
@@ -148,3 +148,6 @@ func _refresh() -> void:
 		_text.text = "Filling O2..." if Settings.lang == "en" else "Llenando O2..."
 	else:
 		_text.text = "%s: O2 %d%%" % [Settings.interact_name(), roundi(ResourceSystem.habitat_tank_stock)]
+	var measured := FONT.get_string_size(_text.text, HORIZONTAL_ALIGNMENT_LEFT, -1.0, 16)
+	_text.size = Vector2(measured.x + 8.0, measured.y + 4.0)
+	_text.position = Vector2(-_text.size.x * 0.5, -78.0)

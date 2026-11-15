@@ -14,7 +14,7 @@ const DATA_PATH := "res://data/cinematics/cinematics.json"
 const BAR_HEIGHT := 28.0
 const VIEW_SIZE := Vector2(640, 360)
 
-@export var seconds_per_character: float = 0.03
+@export var seconds_per_character: float = 0.02
 
 var _defs: Dictionary = {}
 var _triggers: Dictionary = {}

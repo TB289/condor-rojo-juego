@@ -3,7 +3,7 @@ extends CanvasLayer
 ## Hosts the shared INTI box. Tab asks for a hint, finishes the typewriter, or closes the line.
 ## Arrival and danger use the same box. They do not take the E key from modules.
 
-const HINT_STEP := 0.025
+const HINT_STEP := 0.014
 const AUTO_STEP := 0.015
 
 var _toast := false

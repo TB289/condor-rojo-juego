@@ -41,10 +41,10 @@ func _ready() -> void:
 	_warning.name = "StormWarning"
 	_warning.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	_warning.add_theme_font_override("font", preload("res://assets/fonts/m5x7.ttf"))
-	_warning.add_theme_font_size_override("font_size", 17)
-	_warning.add_theme_color_override("font_color", Color("fff3bd"))
-	_warning.add_theme_color_override("font_outline_color", Color("341024"))
-	_warning.add_theme_constant_override("outline_size", 4)
+	_warning.add_theme_font_size_override("font_size", 16)
+	_warning.add_theme_color_override("font_color", Color("fffce8"))
+	_warning.add_theme_color_override("font_outline_color", Color("142030"))
+	_warning.add_theme_constant_override("outline_size", 2)
 	_warning.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	_warning.position = Vector2(95.0, 308.0)
 	_warning.size = Vector2(450.0, 26.0)

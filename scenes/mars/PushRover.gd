@@ -64,7 +64,7 @@ func _on_mission_completed(mission_id: StringName) -> void:
 	if mission_id == &"repair_support_rover":
 		_update_indicator()
 		queue_redraw()
-		_notice("Rover reparado. Podrás conducirlo desde el Sol 2.", "Rover repaired. Driving unlocks on Sol 2.")
+		_notice("Rover reparado. Podrás conducirlo desde el Día 2.", "Rover repaired. Driving unlocks on Day 2.")
 
 
 func _update_indicator() -> void:
@@ -91,7 +91,7 @@ func rover_prompt() -> String:
 	if GameState.current_sol >= 1 and not is_repaired():
 		return "E: reparar rover" if es else "E: repair rover"
 	if is_repaired() and GameState.current_sol < 2:
-		return "Rover listo en Sol 2" if es else "Drive available on Sol 2"
+		return "Rover listo el Día 2" if es else "Drive available on Day 2"
 	if can_drive():
 		return "E: conducir rover" if es else "E: drive rover"
 	return "E: ver rover" if es else "E: inspect rover"
@@ -119,7 +119,7 @@ func handle_support_interact() -> void:
 	if not can_drive():
 		_inspect()
 		if is_repaired():
-			_notice("Podrás conducirlo desde el Sol 2.", "Driving unlocks on Sol 2.")
+			_notice("Podrás conducirlo desde el Día 2.", "Driving unlocks on Day 2.")
 		return
 	# After it is drivable, sprint + interact still opens the fact card without
 	# interfering with the one-button enter/exit controls (including on touch).

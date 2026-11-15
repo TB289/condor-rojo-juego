@@ -3,7 +3,7 @@
   "endings": {
     "ejemplar": {
       "title": "Misión ejemplar",
-      "text": "La base quedó en buen estado. Cuidaste el oxígeno, la energía y la comida. También cumpliste las cinco misiones principales.",
+      "text": "Cuidaste el oxígeno, la energía y el hambre, y cerraste las misiones. Las decisiones fueron tuyas.",
       "que_aprendiste": [
         "En Marte nada es gratis: cada módulo encendido gasta energía que los paneles tienen que pagar.",
         "El polvo de Marte se pega a los paneles solares y les quita luz. Por eso hay que limpiarlos.",
@@ -11,7 +11,7 @@
       ],
       "inti": "Lo hiciste muy bien. Las decisiones fueron tuyas; yo solo miraba los números.",
       "title_en": "Exemplary mission",
-      "text_en": "The base is in good shape. You looked after the oxygen, the energy, and the food. You also finished the five main missions.",
+      "text_en": "You looked after oxygen, energy, and hunger, and you finished the missions. The decisions were yours.",
       "inti_en": "You did very well. The decisions were yours; I only watched the numbers.",
       "que_aprendiste_en": [
         "On Mars nothing is free: every module you turn on uses energy the panels have to pay for.",
@@ -21,7 +21,7 @@
     },
     "justo": {
       "title": "Volvimos justo",
-      "text": "Llegaste al final de la misión. Alguna reserva quedó corta, o faltó alguna misión principal, pero estás bien y la base sigue en pie.",
+      "text": "Alguna reserva quedó corta, o faltó una misión. La base sigue en pie.",
       "que_aprendiste": [
         "Guardar un poco de oxígeno, energía y comida hace el día siguiente más tranquilo.",
         "En Marte hay hielo de agua bajo el suelo y en los polos. De esa agua se puede sacar oxígeno.",
@@ -29,7 +29,7 @@
       ],
       "inti": "Volvimos justo. Revisemos juntos qué estuvo cerca del límite.",
       "title_en": "We made it, just",
-      "text_en": "You reached the end of the mission. Some reserve ran short, or a main mission was left undone, but you are all right and the base is still standing.",
+      "text_en": "A reserve ran short, or a mission was left undone. The base is still standing.",
       "inti_en": "We made it, just. Let's look together at what was close to the limit.",
       "que_aprendiste_en": [
         "Keeping a little oxygen, energy, and food makes the next day calmer.",
@@ -39,7 +39,7 @@
     },
     "rescate": {
       "title": "Rescate",
-      "text": "El protocolo de rescate se activó. La nave de apoyo te recoge. Aprendimos mucho.",
+      "text": "La nave de apoyo te recoge.",
       "que_aprendiste": [
         "Si el oxígeno, la energía o la comida llegan a cero, la misión se detiene para cuidarte.",
         "Pedir rescate a tiempo es una decisión inteligente. Estás a salvo.",
@@ -47,7 +47,7 @@
       ],
       "inti": "Protocolo de rescate activo. Estás a salvo.",
       "title_en": "Rescue",
-      "text_en": "The rescue protocol started. The support ship picks you up. We learned a lot.",
+      "text_en": "The support ship picks you up.",
       "inti_en": "Rescue protocol active. You are safe.",
       "que_aprendiste_en": [
         "If the oxygen, the energy, or the food hits zero, the mission stops to look after you.",
@@ -75,9 +75,9 @@
     }
   },
   "rescue_lines": {
-    "oxygen": "Se acabó el oxígeno. Activo el protocolo de rescate. Ya viene ayuda y estás a salvo.",
-    "energy": "Se acabó la energía de la base. Activo el protocolo de rescate. Estás a salvo.",
-    "food": "Se acabó la comida. Activo el protocolo de rescate. Nadie se queda sin apoyo: viene una nave."
+    "oxygen": "Se acabó el oxígeno.",
+    "energy": "Se acabó la energía.",
+    "food": "La barra de hambre quedó vacía."
   },
   "lessons": [
     {
@@ -157,8 +157,8 @@
     }
   ],
   "rescue_lines_en": {
-    "oxygen": "The oxygen ran out. I am starting the rescue protocol. Help is coming and you are safe.",
-    "energy": "The base ran out of energy. I am starting the rescue protocol. You are safe.",
-    "food": "The food ran out. I am starting the rescue protocol. Nobody is left without support: a ship is coming."
+    "oxygen": "The oxygen ran out.",
+    "energy": "The energy ran out.",
+    "food": "The hunger bar is empty."
   }
 }

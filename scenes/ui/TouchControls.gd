@@ -847,7 +847,10 @@ func _build() -> void:
 	_scale_display.name = "ScaleValue"
 	_scale_display.visible = false
 	_scale_display.add_theme_font_override("font", FONT)
-	_scale_display.add_theme_font_size_override("font_size", 12)
+	_scale_display.add_theme_font_size_override("font_size", 16)
+	_scale_display.add_theme_color_override("font_outline_color", Palette.CONTORNO)
+	_scale_display.add_theme_constant_override("outline_size", 2)
+	_scale_display.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	_scale_display.add_theme_color_override("font_color", Palette.CREMA)
 	_scale_display.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	_root.add_child(_scale_display)
@@ -858,7 +861,10 @@ func _build() -> void:
 	_hint.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	_hint.add_theme_color_override("font_color", Palette.CREMA)
 	_hint.add_theme_font_override("font", FONT)
-	_hint.add_theme_font_size_override("font_size", 12)
+	_hint.add_theme_font_size_override("font_size", 16)
+	_hint.add_theme_color_override("font_outline_color", Palette.CONTORNO)
+	_hint.add_theme_constant_override("outline_size", 2)
+	_hint.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	_hint.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	_root.add_child(_hint)
 
@@ -886,7 +892,8 @@ func _build_coach() -> void:
 	look.font = FONT
 	look.font_size = 16
 	look.font_color = Palette.CREMA
-	look.outline_size = 1
+	look.outline_size = 2
+	_coach_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	look.outline_color = Palette.ESPACIO
 	_coach_label.label_settings = look
 	_coach_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART

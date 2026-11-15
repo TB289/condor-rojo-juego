@@ -672,7 +672,7 @@ func _auto_dawn() -> void:
 	if GameState.run_over or EndingSystem.try_end(&"journal"):
 		return
 	_start_sol(GameState.current_sol + 1)
-	_notify(Settings.pack("Amaneció. Otro sol empieza.", "Dawn has arrived. Another sol begins."))
+	_notify(Settings.pack("Amaneció. Otro día empieza.", "Dawn has arrived. Another day begins."))
 
 
 func _update_light(t: float) -> void:

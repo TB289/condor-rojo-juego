@@ -155,8 +155,12 @@ func _draw() -> void:
 func _ink(at: Vector2, text: String, color: Color, outline: bool) -> void:
 	var baseline := at + Vector2(0.0, FONT.get_ascent(FONT_SIZE))
 	if outline:
-		for step in [Vector2(-1, 0), Vector2(1, 0), Vector2(0, -1), Vector2(0, 1)]:
-			FONT.draw_string(get_canvas_item(), baseline + step, text, HORIZONTAL_ALIGNMENT_LEFT, -1.0, FONT_SIZE, Palette.ESPACIO)
+		var edge := Color("142030")
+		for ox in range(-2, 3):
+			for oy in range(-2, 3):
+				if ox == 0 and oy == 0:
+					continue
+				FONT.draw_string(get_canvas_item(), baseline + Vector2(ox, oy), text, HORIZONTAL_ALIGNMENT_LEFT, -1.0, FONT_SIZE, edge)
 	FONT.draw_string(get_canvas_item(), baseline, text, HORIZONTAL_ALIGNMENT_LEFT, -1.0, FONT_SIZE, color)
 
 

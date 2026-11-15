@@ -53,7 +53,8 @@ func _build_close_button() -> void:
 	title_label.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	if title_label.label_settings != null:
 		var title_style := title_label.label_settings.duplicate() as LabelSettings
-		title_style.font_size = 18
+		title_style.font_size = 16
+		title_style.outline_size = 2
 		title_label.label_settings = title_style
 	var close_button := Button.new()
 	close_button.name = "CloseSleep"
@@ -134,10 +135,14 @@ func _render(keep_ration: String, keep_option: String, keep_power: Array[StringN
 	_fill_day_card()
 	var lines: PackedStringArray = []
 	for raw in report.get("summary_lines", []):
-		lines.append(Settings.visible_text(String(raw)))
+		var shown := Settings.visible_text(String(raw))
+		if not shown.is_empty():
+			lines.append(shown)
 	if lines.is_empty():
 		lines.append(Settings.visible_text(String(report.get("summary", ""))))
-	summary_label.text = _one_summary(lines)
+	while lines.size() > 3:
+		lines.remove_at(0)
+	summary_label.text = "\n".join(lines)
 	for child in decisions.get_children():
 		decisions.remove_child(child)
 		child.free()
@@ -406,8 +411,10 @@ func _header(text: String) -> Label:
 	label.text = text
 	label.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	label.add_theme_color_override("font_color", INK)
-	label.add_theme_constant_override("outline_size", 0)
+	label.add_theme_font_size_override("font_size", 16)
+	label.add_theme_color_override("font_color", Palette.CREMA)
+	label.add_theme_color_override("font_outline_color", Palette.CONTORNO)
+	label.add_theme_constant_override("outline_size", 2)
 	return label
 
 

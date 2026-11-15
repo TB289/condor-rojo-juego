@@ -209,7 +209,7 @@ func _build_clock() -> void:
 	_dose_button.add_theme_color_override("font_hover_color", Palette.CREMA)
 	_dose_button.add_theme_color_override("font_focus_color", Palette.ORO)
 	_dose_button.add_theme_color_override("font_outline_color", Palette.CONTORNO)
-	_dose_button.add_theme_constant_override("outline_size", 3)
+	_dose_button.add_theme_constant_override("outline_size", 2)
 	_dose_button.pressed.connect(func() -> void:
 		NasaData.show_manual("radiation")
 		NasaData.show_manual("rad_mars")
@@ -520,7 +520,7 @@ func _ink(size: int, color: Color) -> LabelSettings:
 	settings.font = FONT
 	settings.font_size = size
 	settings.font_color = color
-	settings.outline_size = 3
+	settings.outline_size = 2
 	settings.outline_color = Palette.CONTORNO
 	return settings
 
@@ -531,7 +531,7 @@ func _sign_ink(color: Color) -> LabelSettings:
 	settings.font = FONT
 	settings.font_size = 16
 	settings.font_color = color
-	settings.outline_size = 1
+	settings.outline_size = 2
 	settings.outline_color = Palette.ESPACIO
 	return settings
 

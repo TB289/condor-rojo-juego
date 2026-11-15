@@ -74,8 +74,11 @@ func _build_panel() -> void:
 	_title = Label.new()
 	_title.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	_title.add_theme_font_override("font", FONT)
-	_title.add_theme_font_size_override("font_size", 19)
-	_title.add_theme_color_override("font_color", Color("ffe000"))
+	_title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	_title.add_theme_font_size_override("font_size", 16)
+	_title.add_theme_color_override("font_color", Color("fffce8"))
+	_title.add_theme_color_override("font_outline_color", Color("142030"))
+	_title.add_theme_constant_override("outline_size", 2)
 	header.add_child(_title)
 
 	_close_button = Button.new()
@@ -95,9 +98,11 @@ func _build_panel() -> void:
 	_body.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	_body.add_theme_font_override("normal_font", FONT)
 	_body.add_theme_font_override("bold_font", FONT)
-	_body.add_theme_font_size_override("normal_font_size", 15)
-	_body.add_theme_font_size_override("bold_font_size", 15)
+	_body.add_theme_font_size_override("normal_font_size", 16)
+	_body.add_theme_font_size_override("bold_font_size", 16)
 	_body.add_theme_color_override("default_color", Color("fffce8"))
+	_body.add_theme_color_override("font_outline_color", Color("142030"))
+	_body.add_theme_constant_override("outline_size", 2)
 	column.add_child(_body)
 	_panel.hide()
 

@@ -1125,11 +1125,17 @@ func _add_zone_sign(at: Vector2, line: String) -> void:
 	var sign := Label.new()
 	sign.name = "ZoneSign"
 	sign.text = line
-	sign.position = at
 	sign.add_theme_font_override("font", preload("res://assets/fonts/m5x7.ttf"))
-	sign.add_theme_font_size_override("font_size", 14)
+	sign.add_theme_font_size_override("font_size", 16)
 	sign.add_theme_color_override("font_color", Color("fffce8"))
 	sign.add_theme_color_override("font_outline_color", Color("142030"))
-	sign.add_theme_constant_override("outline_size", 3)
+	sign.add_theme_constant_override("outline_size", 2)
+	sign.clip_text = false
+	sign.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	sign.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+	var font := preload("res://assets/fonts/m5x7.ttf") as Font
+	var measured := font.get_string_size(line, HORIZONTAL_ALIGNMENT_LEFT, -1.0, 16)
+	sign.size = Vector2(measured.x + 4.0, measured.y + 4.0)
+	sign.position = at - Vector2(sign.size.x * 0.5, sign.size.y)
 	sign.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	entities.add_child(sign)

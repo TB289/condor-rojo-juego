@@ -5,6 +5,8 @@ extends Area2D
 
 @export var destination: StringName = &"lab"
 const DOOR_TEX := preload("res://assets/art/base/interior_door.png")
+const FONT: Font = preload("res://assets/fonts/m5x7.ttf")
+const LABEL_SIZE := 16
 
 var _player: Player
 var _text: Label
@@ -28,19 +30,16 @@ func _ready() -> void:
 	_door_sprite.offset = Vector2(0, -DOOR_TEX.get_height() / 2.0)
 	add_child(_door_sprite)
 	_text = Label.new()
-	# Side-wall doors need the caption immediately above their own frame.
-	# Anchor text inward on each side so it cannot spill across the room.
-	var right_wall := position.x > 160.0
-	_text.position = Vector2(-140, -43) if right_wall else Vector2(-14, -43)
-	_text.size = Vector2(140, 19)
-	_text.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT if right_wall else HORIZONTAL_ALIGNMENT_LEFT
+	_text.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	_text.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
 	_text.autowrap_mode = TextServer.AUTOWRAP_OFF
+	_text.clip_text = false
 	_text.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	_text.add_theme_font_override("font", preload("res://assets/fonts/m5x7.ttf"))
-	_text.add_theme_font_size_override("font_size", 13)
+	_text.add_theme_font_override("font", FONT)
+	_text.add_theme_font_size_override("font_size", LABEL_SIZE)
 	_text.add_theme_color_override("font_color", Color("fffce8"))
 	_text.add_theme_color_override("font_outline_color", Color("142030"))
-	_text.add_theme_constant_override("outline_size", 3)
+	_text.add_theme_constant_override("outline_size", 2)
 	_text.z_index = 10
 	_text.hide()
 	add_child(_text)
@@ -63,7 +62,11 @@ func _process(_delta: float) -> void:
 		_on_exited(_player)
 	_text.visible = near and not travel_blocked()
 	if _text.visible:
-		_text.text = "%s: %s" % [Settings.interact_name(), _label(Settings.lang == "en")]
+		var line := "%s: %s" % [Settings.interact_name(), _label(Settings.lang == "en")]
+		_text.text = line
+		var measured := FONT.get_string_size(line, HORIZONTAL_ALIGNMENT_LEFT, -1.0, LABEL_SIZE)
+		_text.size = Vector2(measured.x + 8.0, measured.y + 4.0)
+		_text.position = Vector2(-_text.size.x * 0.5, -_text.size.y - 16.0)
 
 
 func travel_blocked() -> bool:
