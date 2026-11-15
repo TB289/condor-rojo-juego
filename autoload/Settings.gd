@@ -81,12 +81,12 @@ const UI := {
 		"en": "Esc, Start, or click to skip",
 	},
 	"intro.brief.mars": {
-		"es": "La gravedad es 0,38 g: cerca de un tercio de la de la Tierra. Pesarías menos de la mitad.\nUn sol dura 24 horas y 39 minutos. La temperatura media ronda los -63 °C.\nLa atmósfera es delgada, casi todo dióxido de carbono, y su presión es menos del 1% de la de la Tierra.\nLa Tierra queda, en promedio, a unos 225 millones de km. Un mensaje tarda entre 3 y 22 minutos.",
-		"en": "Gravity is 0.38 g: about a third of Earth's. You would weigh less than half.\nA sol lasts 24 hours and 39 minutes. The average temperature is about -63 °C.\nThe air is thin, almost all carbon dioxide, and its pressure is less than 1% of Earth's.\nEarth is about 225 million km away, on average. A message takes 3 to 22 minutes.",
+		"es": "La gravedad es 0,38 g, cerca de un tercio de la de la Tierra, y un sol dura 24 horas y 39 minutos. El aire es casi todo dióxido de carbono y muy delgado, y un mensaje a la Tierra tarda entre 3 y 22 minutos.",
+		"en": "Gravity is 0.38 g, about a third of Earth's, and a sol lasts 24 hours and 39 minutes. The air is almost all carbon dioxide and very thin, and a message to Earth takes 3 to 22 minutes.",
 	},
 	"intro.brief.goals": {
-		"es": "Sobrevive y arma la base: oxígeno, energía y comida. El traje gasta oxígeno lejos del campamento.\nRecoge datos de rovers que ya no operan (Spirit, Opportunity y Sojourner) y busca biosignaturas en el sedimento de un antiguo lecho de lago. No se afirma que haya vida.\nEstudia los minerales de Marte, las cuevas (tubos de lava y tragaluces) y los glaciares de hielo de agua, cubiertos de escombros, en latitudes medias.\nLo demás de la base es el trabajo de cada día. Tú decides.",
-		"en": "Survive and set up the base: oxygen, energy, and food. The suit uses oxygen away from camp.\nCollect data from rovers that no longer run (Spirit, Opportunity, and Sojourner) and look for biosignatures in the sediment of an ancient lakebed. Nothing here says life was found.\nStudy Mars minerals, the caves (lava tubes and skylights), and the water-ice glaciers, covered in debris, at mid-latitudes.\nThe rest of the base is each day's work. You decide.",
+		"es": "Sobrevive y arma la base con oxígeno, energía y comida, y recoge datos de rovers que ya no operan. Estudia los minerales, las cuevas y los glaciares de hielo de Marte, y decide tú el resto de cada día.",
+		"en": "Survive and set up the base with oxygen, energy, and food, and collect data from rovers that no longer run. Study the minerals, caves, and water-ice glaciers of Mars, and decide the rest of each day yourself.",
 	},
 	"intro.quito": {"es": "Quito, Ecuador. Año 2040.", "en": "Quito, Ecuador. Year 2040."},
 	"intro.travel": {

@@ -10,6 +10,9 @@ const SKIP_LOCK_MSEC := 400
 const TITLE_COLOR := Color(1, 0.878431, 0, 1)
 const BRIEF_PAGES: Array[String] = ["intro.brief.mars", "intro.brief.goals"]
 const BRIEF_TITLES: Array[String] = ["intro.brief.mars_title", "intro.brief.goals_title"]
+## The briefing is the game's own copy, not INTI.
+const BRIEF_STEP := 0.022
+const CONTINUE_DELAY := 1.5
 
 var _done := false
 var _briefing := true
@@ -21,6 +24,11 @@ var _brief_title: Label
 var _brief_body: Label
 var _brief_hint: Label
 var _brief_next: Button
+var _type_text := ""
+var _typed := 0
+var _type_left := 0.0
+var _typing := false
+var _continue_left := 0.0
 
 @onready var _caption: Label = %Caption
 @onready var _inti: IntiBox = $UI/Root/IntiBubble
@@ -56,6 +64,29 @@ func _on_language(_lang: String) -> void:
 		_show_page()
 	else:
 		%SkipHint.text = Settings.text("intro.skip")
+
+
+func _process(delta: float) -> void:
+	if _brief_body == null or not _briefing:
+		return
+	if _typing:
+		_type_left += delta
+		while _type_left >= BRIEF_STEP and _typed < _type_text.length():
+			_type_left -= BRIEF_STEP
+			_typed += 1
+		_brief_body.visible_characters = _typed
+		if _typed < _type_text.length():
+			return
+		_typing = false
+		_continue_left = CONTINUE_DELAY
+		return
+	if _continue_left <= 0.0:
+		return
+	_continue_left = maxf(0.0, _continue_left - delta)
+	if _continue_left <= 0.0 and _brief_next != null:
+		_brief_next.visible = true
+		_brief_next.disabled = false
+		_brief_next.grab_focus()
 
 
 func _input(event: InputEvent) -> void:
@@ -125,6 +156,8 @@ func _on_flag_planted() -> void:
 
 
 func _advance_brief() -> void:
+	if _typing or _continue_left > 0.0 or _brief_next == null or not _brief_next.visible or _brief_next.disabled:
+		return
 	if Time.get_ticks_msec() - _ready_msec < SKIP_LOCK_MSEC:
 		return
 	_page += 1
@@ -138,6 +171,8 @@ func _start_film() -> void:
 	if _done or not _briefing or Time.get_ticks_msec() - _ready_msec < SKIP_LOCK_MSEC:
 		return
 	_briefing = false
+	_typing = false
+	_continue_left = 0.0
 	%SkipHint.text = Settings.text("intro.skip")
 	if _brief_layer != null:
 		_brief_layer.queue_free()
@@ -151,7 +186,15 @@ func _show_page() -> void:
 		return
 	var page := clampi(_page, 0, BRIEF_PAGES.size() - 1)
 	_brief_title.text = Settings.text(BRIEF_TITLES[page])
-	_brief_body.text = Settings.text(BRIEF_PAGES[page])
+	_type_text = Settings.text(BRIEF_PAGES[page])
+	_typed = 0
+	_type_left = 0.0
+	_brief_body.text = _type_text
+	_brief_body.visible_characters = 0 if not _type_text.is_empty() else -1
+	_typing = not _type_text.is_empty()
+	_continue_left = 0.0 if _typing else CONTINUE_DELAY
+	_brief_next.visible = false
+	_brief_next.disabled = true
 	_brief_next.text = Settings.text("intro.brief.next")
 	_brief_hint.text = Settings.text("intro.brief.skip")
 
@@ -212,7 +255,10 @@ func _build_brief() -> void:
 	column.add_child(_brief_title)
 
 	_brief_body = Label.new()
+	_brief_body.custom_minimum_size = Vector2(560, 0)
+	_brief_body.add_theme_font_size_override("font_size", 20)
 	_brief_body.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	_brief_body.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	_brief_body.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	column.add_child(_brief_body)
 
@@ -230,7 +276,6 @@ func _build_brief() -> void:
 	_show_page()
 	root.modulate.a = 0.0
 	UiMotion.fade_in(root)
-	_brief_next.grab_focus()
 
 
 func _line(text: String) -> String:
