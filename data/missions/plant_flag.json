@@ -3,7 +3,7 @@
   "order": 1,
   "unlock": "start",
   "category": "main",
-  "title": "Plant the Ecuadorian flag",
+  "title": "Plantar la bandera de Ecuador",
   "title_en": "Plant the Ecuadorian flag",
   "requires_module": "habitat",
   "objectives": [

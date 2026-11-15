@@ -2,7 +2,7 @@
   "id": "fix_solar_panel",
   "category": "main",
   "order": 2,
-  "title": "Set up the solar panel",
+  "title": "Limpiar el panel",
   "description": "El panel solar está cubierto de polvo. Ve hasta él y límpialo para que dé más energía.",
   "science": "El polvo de Marte se pega a los paneles solares y les quita energía. A veces el viento los limpia un poco.",
   "done": "¡El panel quedó limpio! Ahora le llega más luz del Sol.",
